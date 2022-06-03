@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.aside{
+ background-color: #233A95;  
+ padding:7px 0px;
+ .container{
+     font-size: 12.5px;
+    @include centerFlex();
+    color: white;
+    .covid{
+        padding: 0px 6px;
+    }
+ } 
+}
