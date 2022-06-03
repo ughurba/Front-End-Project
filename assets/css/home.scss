@@ -1,7 +1,13 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+@mixin alignItemsCenter {
+    display: flex;
+    align-items: center;
+
 }
 
 @mixin centerFlex {
@@ -15,16 +21,239 @@
     justify-content: space-between;
 }
 
+@mixin sub-menu($padding, $posLeft, $posTop) {
 
-.aside{
- background-color: #233A95;  
- padding:7px 0px;
- .container{
-     font-size: 12.5px;
-    @include centerFlex();
-    color: white;
-    .covid{
-        padding: 0px 6px;
+
+    color: black;
+    background-color: #fff;
+    border: 1px solid #edeef5;
+    font-weight: 500;
+    z-index: 4;
+    padding: $padding;
+    position: absolute;
+    left: $posLeft;
+    top: $posTop;
+    opacity: 0;
+    
+
+}
+
+//------------------------------------------------------//
+.aside {
+    background-color: #233A95;
+    padding: 7px 0px;
+
+    .container {
+        font-size: 12.5px;
+        @include centerFlex();
+        color: white;
+
+        .covid {
+            padding: 0px 6px;
+        }
     }
- } 
+}
+
+
+
+
+
+.header-top {
+    background-color: #fff;
+    border-bottom: 1px solid #e3e4e6;
+    color: #3e445a;
+
+    .container {
+
+        .nav-bar {
+
+            @include flex-between();
+            align-items: center;
+
+            .nav-column-left {
+                font-size: 13px;
+
+                .nav-list {
+                    display: flex;
+                    margin: 0;
+
+                    .nav-item {
+                        padding-left: 15px;
+                        list-style: none;
+
+                        .nav-link {
+                            color: currentColor;
+                            &:hover{
+                                color: #2bbef9;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+
+
+            .nav-column-right {
+                font-size: 13px;
+                display: flex;
+
+                .icon-text-column-right {
+                    @include alignItemsCenter();
+
+                    img {
+                        margin-right: 5px;
+                    }
+
+                    span {
+                        padding-right: 20px;
+
+                    }
+
+                }
+
+
+
+
+                .nav-right-text-content {
+                    border-left: 1px solid black;
+                    padding: 0px 20px;
+                    @include alignItemsCenter();
+
+                    .nav-right-call {
+                        color: #2bbef9;
+                        text-decoration: none;
+
+                        strong {
+                            margin-left: 3px;
+                            font-weight: bolder;
+                        }
+                    }
+                }
+
+
+                .nav-right-language-money {
+                    border-left: 1px solid black;
+                    @include alignItemsCenter();
+
+                    .language-list {
+                        margin: 0;
+                        list-style: none;
+                        height: 2.4375rem;
+                        position: relative;
+                        top: 10px;
+
+                       
+
+
+                        .languages {
+                            position: relative;
+
+                            cursor: pointer;
+                            
+                            
+                            .fa-angle-down {
+                                padding-left: 3px
+                            }
+
+                            .sub-languages {
+                                transition: 0.4s ease-in;
+                                &:hover {
+                                    display: block;
+                    
+                                }
+
+                               
+
+                                @include sub-menu(13px, -18px, 30px);
+
+                            
+                                li {
+                                    transition:all 0.2s  ease-in-out;
+                                    list-style: none;
+                                    padding: 4px 14px;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        color: rgb(29, 221, 255);
+                                    }
+                                }
+
+                            }
+
+
+
+                        }
+
+                    }
+
+                    .language-list:hover .sub-languages {
+                        opacity: 1;
+                        
+                    }
+
+                    .language-list:hover {
+                        color: #2bbef9;
+
+                    }
+
+
+
+                    .money-list {
+
+                        list-style: none;
+                        margin: 0;
+                        height: 2.4375rem;
+                        position: relative;
+                        top: 10px;
+
+                        .money {
+                            
+                            cursor: pointer;
+
+                            .fa-angle-down {
+                                padding-left: 3px
+                            }
+
+
+                            .sub-money {
+                                transition: 0.4s ease-in;
+                                @include sub-menu(20px, 20px, 30px);
+
+                                li {
+                                    transition:all 0.2s ease-in-out;
+                                    list-style: none;
+                                    padding: 3px 4px;
+
+                                    &:hover {
+                                        color: rgb(29, 221, 255);
+                                    }
+                                }
+
+                            }
+
+                        }
+
+                    }
+
+                    .money-list:hover .sub-money {
+                        opacity: 1;
+
+                    }
+
+                    .money-list:hover {
+                        color: #2bbef9;
+                       
+                    }
+
+                }
+
+
+            }
+
+
+        }
+
+
+    }
 }
