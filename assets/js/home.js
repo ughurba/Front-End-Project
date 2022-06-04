@@ -4,13 +4,13 @@ new Swiper(".mySwiper", {
       clickable: true,
       dynamicBullets: true,
     },
-    loop: true,
-    grabCursor:true,
-    autoplay: {
-      delay: 2000,
-      stopOnLastSlide: false,
-      disableOnInteraction: false,
-    },
+    // loop: true,
+    // grabCursor:true,
+    // autoplay: {
+    //   delay: 2000,
+    //   stopOnLastSlide: false,
+    //   disableOnInteraction: false,
+    // },
     speed: 1000,
     navigation:{
         nextEl:'.swiper-button-next',
