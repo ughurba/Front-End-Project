@@ -34,7 +34,7 @@
     left: $posLeft;
     top: $posTop;
     opacity: 0;
-    
+
 
 }
 
@@ -83,7 +83,8 @@
 
                         .nav-link {
                             color: currentColor;
-                            &:hover{
+
+                            &:hover {
                                 color: #2bbef9;
                             }
                         }
@@ -143,33 +144,28 @@
                         position: relative;
                         top: 10px;
 
-                       
+
 
 
                         .languages {
                             position: relative;
 
                             cursor: pointer;
-                            
-                            
+
+
                             .fa-angle-down {
                                 padding-left: 3px
                             }
 
                             .sub-languages {
+                                visibility: hidden;
                                 transition: 0.4s ease-in;
-                                &:hover {
-                                    display: block;
-                    
-                                }
-
-                               
 
                                 @include sub-menu(13px, -18px, 30px);
 
-                            
+
                                 li {
-                                    transition:all 0.2s  ease-in-out;
+                                    transition: all 0.2s ease-in-out;
                                     list-style: none;
                                     padding: 4px 14px;
                                     cursor: pointer;
@@ -189,7 +185,8 @@
 
                     .language-list:hover .sub-languages {
                         opacity: 1;
-                        
+                        visibility: visible;
+
                     }
 
                     .language-list:hover {
@@ -208,7 +205,7 @@
                         top: 10px;
 
                         .money {
-                            
+
                             cursor: pointer;
 
                             .fa-angle-down {
@@ -217,11 +214,13 @@
 
 
                             .sub-money {
+                                visibility: hidden;
                                 transition: 0.4s ease-in;
                                 @include sub-menu(20px, 20px, 30px);
 
+
                                 li {
-                                    transition:all 0.2s ease-in-out;
+                                    transition: all 0.2s ease-in-out;
                                     list-style: none;
                                     padding: 3px 4px;
 
@@ -238,12 +237,13 @@
 
                     .money-list:hover .sub-money {
                         opacity: 1;
+                        visibility: visible;
 
                     }
 
                     .money-list:hover {
                         color: #2bbef9;
-                       
+
                     }
 
                 }
@@ -255,5 +255,442 @@
         }
 
 
+
+
+
+
     }
 }
+
+.header-bottom {
+    padding-top: 20px;
+
+    .container {
+        .nav-bar-center {
+            margin-left: 30px;
+
+            .sub-nav-top {
+
+                @include flex-between();
+
+                .icon-text {
+
+                    padding-left: 30px;
+
+                    p {
+                        display: block;
+                        font-size: .6875rem;
+                        opacity: .5;
+                        margin-top: 2px;
+                    }
+                }
+
+
+
+                .select-location {
+                    @include centerFlex();
+
+                    .select-location-text {
+                        position: relative;
+                        display: flex;
+                        align-content: center;
+                        margin-right: 50px;
+                        border: 1px solid #d9d9e9;
+                        border-radius: 6px;
+                        padding-top: 13px;
+                        padding-bottom: 13px;
+                        cursor: pointer;
+
+                        .text {
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 0px 25px 0px 20px;
+
+                            p:first-child {
+                                font-size: .625rem;
+                                opacity: .5;
+                                margin: 0;
+                            }
+
+                            p:last-child {
+                                font-size: 13.4px;
+                                font-weight: 600;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                width: 100%;
+                                color: #233a95;
+                                padding-right: 1.25rem;
+                                margin: 0;
+                            }
+
+                        }
+
+                        .fa-angle-down {
+                            position: absolute;
+                            right: 17px;
+                            top: 42%;
+                            font-size: 12px;
+                            color: #233a95;
+                        }
+                    }
+
+
+
+                    .sub-nav-top-search {
+                        position: relative;
+
+
+                        form {
+
+                            .search {
+
+                                font-size: 16px;
+                                padding: 0px 15px;
+                                width: 560px;
+                                height: 60px;
+                                max-width: 100vw;
+                                margin: 0;
+                                background-color: #f3f4f7;
+                                color: #202435;
+                                outline: none;
+                                border: none;
+                                border-radius: 10px;
+
+
+
+                            }
+
+                            .fa-magnifying-glass {
+                                position: absolute;
+                                right: 20px;
+                                top: 20px;
+                                font-size: 1.3rem;
+                                font-weight: 600;
+                                opacity: 0.7;
+
+                            }
+                        }
+
+
+                    }
+                }
+
+
+
+
+
+
+                .icon-user-basket {
+                    @include centerFlex();
+                    margin-right: 30px;
+
+                    .user-basket {
+                        font-size: 1.125rem;
+                        width: 2.625rem;
+                        height: 2.625rem;
+                        border: 1px solid #e2e4ec;
+                        border-radius: 50%;
+                        @include centerFlex();
+                    }
+
+                    bdi {
+                        padding: 0px 18px;
+
+                        .price-basket {}
+                    }
+
+                    .basket {
+                        position: relative;
+                        background-color: #FFF1EE;
+
+                        .bi-bag {
+                            color: #ea2b0f;
+                        }
+
+                        sup {
+                            display: inline-flex;
+                            background: #ea2b0f;
+                            position: absolute;
+                            right: -4px;
+                            top: -3px;
+                            padding: 8px 3px 10px 5px;
+                            border-radius: 50%;
+                            color: white;
+                            min-width: 1.0625rem;
+                            height: 1.0625rem;
+                            font-size: 13px;
+
+                        }
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
+
+        .nav-bar-bottom {
+            @include flex-between();
+            margin-top: 30px;
+
+            .nav-bar-bottom-button {
+                .all-categories {
+                    cursor: pointer;
+                    position: relative;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    font-size: .9375rem;
+                    font-weight: 600;
+                    height: 3.125rem;
+                    padding-left: 1.25rem;
+                    padding-right: 1.25rem;
+                    color: #fff;
+                    background-color: #2bbef9;
+                    border-radius: 3.125rem;
+                    display: flex;
+
+                    .bi-list {
+                        font-size: 18px;
+                        padding-right: 10px;
+                    }
+
+                    .all-categories-total {
+                        
+                        h3 {
+                            letter-spacing: 0;
+                             font-size: .9375rem;
+                            font-weight: 600;
+                            margin-bottom: 0;
+                        }
+
+                        span {
+                            position: absolute;
+                            display: inline-flex;
+                            align-items: center;
+                            font-size: .625rem;
+                            letter-spacing: 0;
+                            text-transform: uppercase;
+                            height: 1.125rem;
+                            padding-left: 0.5rem;
+                            padding-right: 0.5rem;
+                            color: #71778e;
+                            background-color: #edeef5;
+                            border: 1px solid #fff;
+                            border-radius: 1.125rem;
+                            bottom: -0.5rem;
+                            
+                        }
+                    }
+
+                    .bi-chevron-down {
+                        margin-left: 14px;
+                    }
+
+                }
+
+                .dropdown-categories {
+                    display: none;
+                    .categories-item {
+                        .category-parent {
+                            .fa-apple {}
+
+                            .category-parent-link {}
+
+                            .bi-chevron-right {}
+
+                            .category-sub-menu {
+                                .category-sub-menu-item {}
+
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+
+        
+            .nav-bar-bottom-menu {
+                
+
+                .nav-bottom-menu-list {
+                    display: flex;
+                    list-style: none;
+                    margin-bottom: 0;
+                   
+                    .shop{
+                        position: relative;
+
+
+                        .nav-bottom-menu-sub-shop {
+                            
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(-5px);
+                            transition: all 0.25s cubic-bezier(0.17, 0.62, 0.44, 0.99);
+                            @include flex-between();
+                            position: absolute;
+                             padding-left:70px;
+                             padding-right: 174.5px;
+                             background-color: #ffffff(251, 26, 26);
+                             border: 1px solid black;
+                             z-index: 30;
+                             width: 1540px;
+                             top: 50px;
+                             right: -755px;
+                             border-top-color: transparent !important;
+                             padding-top: 1.875rem;
+                             padding-bottom: 2.25rem;
+                             border-radius: 0;
+                             border-color: #ffffff;
+                             
+                             ul {
+                                 
+                                
+                                 ul {
+                                     color: #233a95;
+                                     font-weight: 500;
+                                     &:hover{
+                                         color: #2bbef9;
+                                     }
+                                     
+                                     li{
+                                         color: #3e445a;
+                                         font-size: 13px;
+                                         list-style: none;
+                                         padding-top: 20px;
+                                         cursor: pointer;
+                                         &:hover {
+                                             color: #2bbef9;
+                                         }
+                                     }
+                                    
+                                 }
+                             }
+                     
+                           
+                         }
+
+                         &:hover .nav-bottom-menu-sub-shop{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                        
+                    }
+                    .home{
+                        position: relative;
+                        &:hover .nav-bottom-menu-sub{
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .nav-bottom-menu-item {
+                        
+                      
+                        
+                      
+                        .nav-bottom-menu-link {
+                           
+                            &:hover{
+                                background-color: #f1f9ff;
+                                color: #32BDF8;
+                                
+                            }
+                            transition: 0.3s;
+                            text-decoration: none;
+                          font-size: 15px;
+                        font-weight: 600;
+                        line-height: 1;
+                        letter-spacing: 0;
+                        height: 2.5rem;
+                        color: #3e445a;
+                       
+                        padding: 10px 10px;
+                        margin:  10px 10px;
+                        border-radius: 2.5rem;
+                     
+                       
+
+
+                        }
+                        
+
+                        .fa-angle-down {
+                           padding-left: 7px;
+                            
+                        }
+                        .bi-badge-8k {
+                            padding-right: 5px;
+                        }
+
+
+
+
+
+                            
+
+                        .nav-bottom-menu-sub {
+                           
+                            position: absolute;
+                            min-width: 190px;
+                            margin: 0;
+                             padding: 30px 30px;
+                            list-style: none;
+                            left: -0.9375rem;
+                            top: 40px;
+                        
+                            opacity: 0;
+                            visibility: hidden;
+                        
+                            transform: translateY(-5px);
+                           
+                            transition: all 0.25s cubic-bezier(0.17, 0.62, 0.44, 0.99);
+                            background-color: #fff;
+                            border: 1px solid #edeef5;
+                        
+
+                            li {
+                                &:hover{
+                                    color: #32BDF8;
+                                }
+                                color: #3e445a;
+                                font-size: 15px;
+                                cursor: pointer;
+                                padding-bottom: 17px;
+                                font-weight: 500;
+                            }
+                        }
+
+                      
+
+                        
+
+                    }
+               
+                   
+                }
+
+               
+            }
+        }
+       
+       
+
+    }
+      
+}
+   
+   
+
+   
+
+
+
+

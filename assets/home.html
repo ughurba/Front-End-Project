@@ -1,19 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="./css/home.css">
     <title>Document</title>
 </head>
+
 <body>
     <aside class="aside">
         <div class="container">
-            Due to the <strong class="covid">COVID 19</strong>   epidemic, orders may be processed with a slight delay
+            Due to the <strong class="covid">COVID 19</strong> epidemic, orders may be processed with a slight delay
         </div>
     </aside>
+    <header class="header-top">
+        <div class="container">
+            <nav class="nav-bar">
+                <div class="nav-column-left">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">My account</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Wishlist</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Order Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="nav-column-right">
+                    <div class="icon-text-column-right">
+                        <img width="34px" src="./img/nav-icon-hand.png">
+                        <!-- <i class="fa-solid fa-hand-sparkles"></i> -->
+                        <span>100% Secure delivery without contacting the courier</span>
+                    </div>
+
+                    <div class="nav-right-text-content">
+                        Need help? Call Us:
+                        <a class="nav-right-call"><strong>+ 0020 500</strong></a>
+                    </div>
+
+                    <div class="nav-right-language-money">
+                        <ul class="language-list">
+
+                            <li class="languages">
+                                English <i class="fa-solid fa-angle-down"></i>
+                                <ul class="sub-languages">
+                                    <li>English</li>
+                                    <li>Spanish</li>
+                                    <li>German</li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                        <ul class="money-list">
+                            <li class="money">
+                                USD <i class="fa-solid fa-angle-down"></i>
+                                <ul class="sub-money">
+                                    <li>USD</li>
+                                    <li>INR</li>
+                                    <li>GBP</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+            </nav>
+        </div>
+    </header>
+    <header class="header-bottom">
+        <div class="container">
+
+            <div class="nav-bar-center">
+                <div class="sub-nav-top">
+
+                    <div class="icon-text">
+                        <img width="164px" src="./img/bacola-logo.png">
+                        <p>Online Grocery Shopping Center</p>
+                    </div>
+                    <div class="select-location">
+
+
+                        <div class="select-location-text">
+                            <div class="text">
+                                <p>Your Location</p>
+                                <p>Select a Location</p>
+                            </div>
+
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+
+
+                        <div class="sub-nav-top-search">
+                            <form action="#">
+                                <input type="search" name="s" class="search" placeholder="Search for products...">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="icon-user-basket">
+                        <div class="icon user-basket">
+                            <i class="fa-solid fa-user "></i>
+                        </div>
+                        <bdi>
+                            <span class="price-basket">$</span>
+                            0.00
+                        </bdi>
+                        <div class="basket user-basket">
+                            <i class="bi bi-bag"></i>
+                            <sup>0</sup>
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+            <div class="nav-bar-bottom">
+                <div class="nav-bar-bottom-button">
+                    <div class="all-categories">
+                        <i class="bi bi-list"></i>
+                        <div class="all-categories-total">
+                            <h3>ALL CATEGORIES</h3>
+                            <span>TOTAL 63 PRODUCTS</span>
+                        </div>
+
+                        <i class="bi bi-chevron-down"></i>
+
+                    </div>
+                    <div class="dropdown-categories">
+                        <ul class="categories-item">
+                            <li class="category-parent">
+                                <i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Fruist & Vegetables</a>
+                                <i class="bi bi-chevron-right"></i>
+                                <ul class="category-sub-menu">
+                                    <li class="category-sub-menu-item">Cuts & Sprouts</li>
+                                    <li class="category-sub-menu-item">Exotic Fruits & Veggies</li>
+                                    <li class="category-sub-menu-item">Fresh Fruits</li>
+                                    <li class="category-sub-menu-item">Fresh Vegetables</li>
+                                    <li class="category-sub-menu-item">Herbs & Seasonings</li>
+                                    <li class="category-sub-menu-item">Packaged Produce</li>
+                                    <li class="category-sub-menu-item">Party Trays</li>
+                                </ul>
+
+
+                            </li>
+                            <li class="category-parent">
+                                <i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Meats & Seafood</a>
+                            </li>
+                            <li class="category-parent">
+                                <i class="bi bi-egg"></i>
+                                <a href="#" class="category-parent-link">Breakfast & Dairy</a>
+                            </li>
+                            <li class="category-parent">
+                                <i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Beverages</a>
+                                <i class="bi bi-chevron-right"></i>
+                                <ul class="category-sub-menu">
+                                    <li class="category-sub-menu-item">Coffe</li>
+                                    <li class="category-sub-menu-item">Craft Beer</li>
+                                    <li class="category-sub-menu-item">Drink Bxoes & Pouches</li>
+                                    <li class="category-sub-menu-item">Milk & Plant-Based Milk</li>
+                                    <li class="category-sub-menu-item">Soda & Pop</li>
+                                    <li class="category-sub-menu-item">Sparkling Water</li>
+                                    <li class="category-sub-menu-item">Water</li>
+                                    <li class="category-sub-menu-item">Wine</li>
+                                </ul>
+                            </li>
+                            <li class="category-parent"><i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Breads & Bakery</a>
+                            </li>
+                            <li class="category-parent">
+                                <i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Frozen & Foods</a>
+                            </li>
+                            <li class="category-parent">
+                                <i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Biscuits & Snacks</a>
+                            </li>
+                            <li class="category-parent">
+                                <i class="fa-brands fa-apple"></i>
+                                <a href="#" class="category-parent-link">Grocery & Staples</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="nav-bar-bottom-menu">
+                    <ul class="nav-bottom-menu-list">
+                        <li class="nav-bottom-menu-item home"><a href="#" class="nav-bottom-menu-link">HOME<i class="fa-solid fa-angle-down"></i></a>
+                            
+                            <ul class="nav-bottom-menu-sub">
+                                <li>home1</li>
+                                <li>home2</li>
+                                <li>home3</li>
+                                <li>home4</li>
+                                <li>home5</li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-bottom-menu-item shop"><a href="#" class="nav-bottom-menu-link">SHOP<i class="fa-solid fa-angle-down"></i></a>
+
+                            <ul class="nav-bottom-menu-sub-shop">
+                                
+                                <ul>
+                                    <ul>Shop Lists
+                                            <li>Shop Default</li>
+                                            <li>Shop Right Sidebar</li>
+                                            <li>Shop Wide</li>
+                                            <li>List Left Sidebar</li>
+                                            <li>Load More Button</li>
+                                            <li>Infinite Scrolling</li>
+                                    </ul>
+                    </ul>
+                    <ul>
+                        <ul>Product Detail
+                                <li>Product Default</li>
+                                <li>Product Variable</li>
+                                <li>Product Grouped</li>
+                                <li>Product External</li>
+                                <li>Product Downloadable</li>
+                                <li>Product With Video</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <ul>Product Types
+                                <li>Single Type 1</li>
+                                <li>Single Type 2</li>
+                                <li>Single Type 3</li>
+                                <li>Single Type 4</li>
+                                <li>Thumbnails Left</li>
+                                <li>Zoom Image</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <ul>Shop Pages
+                            <li>Cart</li>
+                            <li>Checkout</li>
+                            <li>My account</li>
+                            <li>Wishlist</li>
+                            <li>Order Tracking</li>
+                            <li>Order on WhatsApp</li>
+                        </ul>
+                    </ul>
+                    <ul>
+                        <ul>Shop Layouts
+                                <li>Two Columns</li>
+                                <li>Three Columns</li>
+                                <li>Three Columns Wide</li>
+                                <li>Four Columns</li>
+                                <li>Four Columns Wide</li>
+                                <li>Five Columns wide</li>
+                    
+                        </ul>
+                    </ul>
+                    
+                    
+                    </ul>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </li>
+                    <li class="nav-bottom-menu-item"><a href="#" class="nav-bottom-menu-link"><i class="bi bi-badge-8k"></i>MEATS & SEAFOOD</a></li>
+                    <li class="nav-bottom-menu-item"><a href="#" class="nav-bottom-menu-link"><i class="bi bi-badge-8k"></i>BAKERY</a></li>
+                    <li class="nav-bottom-menu-item"><a href="#" class="nav-bottom-menu-link"><i class="bi bi-badge-8k"></i>BEVERAGES</a></li>
+                    <li class="nav-bottom-menu-item"><a href="#" class="nav-bottom-menu-link">BLOG</a></li>
+                    <li class="nav-bottom-menu-item"><a href="#" class="nav-bottom-menu-link">CONTACT</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+              
+        
+
+
+    </header>
+
+
+
 </body>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="./js/home.js"></script>
+
 </html>
