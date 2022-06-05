@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .aside {
   background-color: #233A95;
   padding: 7px 0px;
@@ -1574,5 +1578,54 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 100;
+}
+
+.discount-elements-img {
+  padding: 30px;
+}
+
+.discount-elements-img .row .bacground-img {
+  background-image: url(../img/bacola-banner/bacola-banner-11.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 10px;
+  height: 280px;
+}
+
+.discount-elements-img .row .bacground-img .elements-info {
+  padding: 60px 40px;
+}
+
+.discount-elements-img .row .bacground-img .elements-info h4 {
+  font-size: .875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  color: #ff6048;
+}
+
+.discount-elements-img .row .bacground-img .elements-info h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -.8px;
+  color: #3e445a;
+}
+
+.discount-elements-img .row .bacground-img .elements-info p {
+  font-size: .75rem;
+}
+
+.discount-elements-img .row .bacground-img .elements-info .elements-button {
+  margin-top: 30px;
+}
+
+.discount-elements-img .row .bacground-img .elements-info .elements-button a {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  padding: 9px 24px 12px 24px;
+  background-color: #233a95;
+  border-radius: 1.875rem;
+  text-decoration: none;
 }
 /*# sourceMappingURL=home.css.map */
