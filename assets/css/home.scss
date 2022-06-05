@@ -119,8 +119,6 @@
 
 
 @mixin  animation($name,$right,$left) {
-    
-
 
     animation-name: $name;
      animation-timing-function: ease-in-out;
@@ -1282,8 +1280,13 @@
            background-color: #fff;
            padding: 20px 52.7px;
            display: none;
-
-           
+         
+        }
+        .child3{
+            padding: 20px 53px;
+        }
+        .child6{
+            padding: 20px 53px;
         }
 
         .button-goods{
@@ -1416,13 +1419,6 @@
                 display: flex;
                 .goods-bottom-box {
 
-
-                  
-
-
-                 
-
-
                     @include goods-bottom-box();
                     .goods-bottom-box-img {
                         display: flex;
@@ -1507,6 +1503,8 @@
             animation-timing-function: ease-in-out;
             animation-duration: 0.2s;
             border: 1px solid #bbbcc4;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
             border-top: none;
             @keyframes button {
                 from{
@@ -1522,28 +1520,20 @@
 
          } 
 
-.goods-bottom-box{
-   
-
-
-    
-}
 .goods-bottom-box:hover{
     
     border: 1px solid #bbbcc4  !important;
+    border-top-left-radius:10px ;
+    border-top-right-radius: 10px;
     z-index: 100;
     
 }
-
-
-
-
-
-
-
 
 
     }
 
 
 }
+
+
+
