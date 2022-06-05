@@ -2215,4 +2215,85 @@
   border-top-right-radius: 10px;
   z-index: 100;
 }
+
+.goods-img .container .row .col-4 .goods-img-bacgkround {
+  border-radius: 10px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 240px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround img {
+  border-radius: 10px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info-bottom {
+  margin-top: 20px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info-bottom span {
+  font-size: 13px;
+  color: #9b9bb4;
+  margin: 0px 12px 0px 0px;
+  font-weight: 500;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info-bottom h3 {
+  color: #202435;
+  font-size: 20px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info-bottom .comment {
+  font-size: 14px;
+  color: #202435;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info-bottom .bacola {
+  font-size: 14px;
+  color: #202435;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info-bottom .bacola .by {
+  font-size: 14px;
+  color: #71778e;
+  font-family: 'Times New Roman', Times, serif;
+  margin-right: 4px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info {
+  padding: 30px 40px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info h5 {
+  color: #00b853;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -.8px;
+  margin-bottom: 0;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-info span {
+  color: #9b9bb4;
+  font-size: 13px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-button {
+  padding: 0px 40px;
+}
+
+.goods-img .container .row .col-4 .goods-img-bacgkround .goods-img-button a {
+  font-weight: 500;
+  padding: 5px 20px 10px 20px;
+  color: white;
+  border-radius: 30px;
+  background-color: #c2c2d3;
+  text-decoration: none;
+}
 /*# sourceMappingURL=home.css.map */
