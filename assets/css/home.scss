@@ -1283,7 +1283,7 @@
             color: #c2c2d3;
         }
 
-        display: flex;
+         display: flex;
 
         img {
             padding: 27px;
@@ -1463,19 +1463,19 @@
 
                         &:hover .bi-arrows-fullscreen {
                             opacity: 1;
-                            @include animation(fullscreen, -10px, 20px)
+                            @include animation(fullscreen, -10px, 20px);
                         }
 
                         &:hover .fa-heart {
                             opacity: 1;
-                            @include animation(heart, -15px, 10px)
+                            @include animation(heart, -15px, 10px);
                         }
 
                         .bi-arrows-fullscreen {
 
                             &:hover {
                                 background-color: #233a95;
-                                color: white
+                                color: white;
                             }
 
                             @include fullscreen();
@@ -1486,7 +1486,7 @@
                             &:hover {
 
                                 background-color: #233a95;
-                                color: white
+                                color: white;
                             }
 
                             @include centerFlex();
@@ -1875,4 +1875,202 @@
         }
     }
 }
+
+
+
+
+
+
+
+
+
+.latest-goods {
+    padding: 30px 0px;
+    .latest-goods-boxs {
+        .latest-goods-box {
+            display: flex;
+        
+
+
+            .goods-bottom-box {
+
+
+                &:hover .bi-arrows-fullscreen {
+                    opacity: 1 !important;
+                    @include animation(fullscreen, -10px, 20px);
+                }
+
+                &:hover .fa-heart {
+                    opacity: 1;
+                    @include animation(heart, -15px, 10px);
+                }
+
+
+
+
+                @include goods-bottom-box();
+                 .goods-bottom-box-img {
+                     display: flex;
+                     justify-content: center;
+                     .price-goods-bottom-img {
+                        @include price-goods-bottom-img();
+                     }
+                     img{
+                         padding: 27px;
+     
+                     }
+                     .bi-arrows-fullscreen {
+
+                        &:hover {
+                            background-color: #233a95;
+                            color: white;
+                        }
+
+                        @include fullscreen();
+                    }
+                       
+
+
+                     }
+     
+                     .fa-heart {
+                        
+                        &:hover {
+                            background-color: #233a95;
+                            color: white;
+                        }
+
+                        @include centerFlex();
+                        @include heart();
+                     
+                     }
+                 }
+     
+     
+                 .goods-bottom-box-info {
+                     padding:0px 20px;
+                     p{
+                        font-size: 17px;
+                        font-weight: 500;
+                        line-height: 1.4;
+                     }
+                     span{
+                        display: block;
+                        font-size: 12px;
+                        color: #00b853;
+                        font-weight: 500;
+                     }
+                 }
+     
+                 .price {
+                     padding: 20px;
+                     strike{
+                        font-size: 20.4px;
+                        color: #c2c2d3;
+                     }
+     
+                     .previous-price {
+                     }
+     
+                     .new-price {
+                        color: #d51243;
+                        font-size: 24px;
+                        margin-left: 5px;
+                     }
+     
+     
+                 }
+     
+                 .button-flex {
+                    @include centerFlex();
+                    position: absolute;
+                    z-index: 50;
+                    bottom: -75px;
+                    left: -1px;
+                    background-color: #fff;
+                   
+                    display: none;
+                     .button-goods {
+                        background-color: #233a95;
+                        @include centerFlex();
+                        border-radius: 50px;
+                        width: 200px;
+                        height: 34px;
+                        transition: 2.2s;
+                         a{
+                            text-decoration: none;
+                            font-size: .75rem;
+                            color: #fff;
+                            font-weight: 500;
+                         }
+                     }
+     
+                 }
+     
+                 .child3 {
+                    padding: 20px 28.7px;
+                }
+        
+               
+
+
+
+                 .goods-bottom-box:hover .button-flex {
+                    opacity: 1;
+                    visibility: visible;
+                    @include centerFlex();
+                    animation-name: button;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 0.2s;
+                    border: 1px solid #bbbcc4;
+                    border-bottom-right-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    border-top: none;
+        
+                    @keyframes button {
+                        from {
+                            padding: 0px 28px;
+                            bottom: -20px;
+                        }
+        
+                        to {
+        
+                            bottom: -75px;
+                        }
+        
+                    }
+        
+        
+                }
+        
+                .goods-bottom-box:hover {
+        
+                    border: 1px solid #bbbcc4 !important;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    z-index: 100;
+        
+                }
+     
+     
+             }
+     
+
+
+
+
+        }
+      
+
+      
+       
+    }
+
+
+
+
+
+
+
+
 
