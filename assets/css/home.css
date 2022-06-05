@@ -2216,11 +2216,18 @@
   z-index: 100;
 }
 
+.goods-img {
+  padding: 50px;
+}
+
+.goods-img .container .row .col-4 .bacground {
+  height: 240px;
+}
+
 .goods-img .container .row .col-4 .goods-img-bacgkround {
   border-radius: 10px;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 240px;
 }
 
 .goods-img .container .row .col-4 .goods-img-bacgkround img {
@@ -2295,5 +2302,78 @@
   border-radius: 30px;
   background-color: #c2c2d3;
   text-decoration: none;
+}
+
+.cupon {
+  margin-top: 7.1875rem;
+}
+
+.cupon .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #233a95;
+  padding-top: 4.375rem;
+}
+
+.cupon .flex .cupon-info {
+  margin-left: 110px;
+}
+
+.cupon .flex .cupon-info h5 {
+  font-weight: 400;
+  color: #e4e5ee;
+  font-size: 1rem;
+}
+
+.cupon .flex .cupon-info .title {
+  font-size: 1.625rem;
+  font-weight: 600;
+  margin-bottom: 0.9375rem;
+  color: #fff;
+}
+
+.cupon .flex .cupon-info p {
+  max-width: 400px;
+  opacity: .5;
+  margin-bottom: 1.875rem;
+  color: #e4e5ee;
+}
+
+.cupon .flex .cupon-info form {
+  position: relative;
+}
+
+.cupon .flex .cupon-info form .bi-envelope {
+  position: absolute;
+  left: 17px;
+  top: 17px;
+  opacity: 0.6;
+  font-size: 18px;
+}
+
+.cupon .flex .cupon-info form input[type=email] {
+  border-radius: 10px;
+  width: 470px;
+  height: 62px;
+  padding-left: 50px;
+  border: none;
+  outline: none;
+}
+
+.cupon .flex .cupon-info form button {
+  position: absolute;
+  right: 6px;
+  top: 4px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 18px 25px;
+  border: 0;
+  background-color: #233a95;
+  color: #fff;
 }
 /*# sourceMappingURL=home.css.map */
