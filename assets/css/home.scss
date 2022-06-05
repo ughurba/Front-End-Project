@@ -2170,12 +2170,15 @@
     .cupon {
         margin-top: 7.1875rem;
         .flex {
-            @include flex-between();
+           
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
             background-color: #233a95;
-            padding-top: 4.375rem;
+            padding-top: 50px;
             
             .cupon-info {
-                margin-left: 110px;
+               padding-bottom: 20px;
                 h5{
                     font-weight: 400;
                     color:#e4e5ee;
@@ -2205,7 +2208,7 @@
                         }
 
                         input[type=email]{
-                            border-radius: 10px;
+                            border-radius: 5px;
                             width: 470px;
                             height: 62px;
                             padding-left: 50px;

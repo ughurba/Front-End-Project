@@ -2312,15 +2312,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #233a95;
-  padding-top: 4.375rem;
+  padding-top: 50px;
 }
 
 .cupon .flex .cupon-info {
-  margin-left: 110px;
+  padding-bottom: 20px;
 }
 
 .cupon .flex .cupon-info h5 {
@@ -2356,7 +2358,7 @@
 }
 
 .cupon .flex .cupon-info form input[type=email] {
-  border-radius: 10px;
+  border-radius: 5px;
   width: 470px;
   height: 62px;
   padding-left: 50px;
