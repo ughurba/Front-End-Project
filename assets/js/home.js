@@ -44,9 +44,8 @@ function timer() {
     if (num === 0) {
       num = 60;
     }
-    if(num < 10){
-      num ='0' + num
-      
+    if (num < 10) {
+      num = "0" + num;
     }
     secound.textContent = num;
   }, 1000);
@@ -54,57 +53,32 @@ function timer() {
 
 timer();
 
-
-
-
-
-
-
 //modal window
-const selectLocation = document.querySelector('.select-location-text');
-const modalWindow = document.querySelector('.modal-window');
-const overlay = document.querySelector('.overlay');
-const closeBtn = document.querySelector('.close-modal-window');
-const btnCategories = document.querySelector('.all-categories');
-const subCategories = document.querySelector('.dropdown-categories');
+const selectLocation = document.querySelector(".select-location-text");
+const modalWindow = document.querySelector(".modal-window");
+const overlay = document.querySelector(".overlay");
+const closeBtn = document.querySelector(".close-modal-window");
+const btnCategories = document.querySelector(".all-categories");
+const subCategories = document.querySelector(".dropdown-categories");
 
-function modalWindowClassAddHandler(){
-  modalWindow.classList.remove('hidden');
-  overlay.classList.remove('hidden')
-
+function modalWindowClassAddHandler() {
+  modalWindow.classList.remove("hidden");
+  overlay.classList.remove("hidden");
 }
 
-function modalWindowClassRemoveHandler(){
-  modalWindow.classList.add('hidden');
-  overlay.classList.add('hidden');
+function modalWindowClassRemoveHandler() {
+  modalWindow.classList.add("hidden");
+  overlay.classList.add("hidden");
 }
 
-
-function categoriesWindowRemoveHandler(){
-  
-
-if(subCategories.classList.contains('categories-hidden')){
- subCategories.classList.remove('categories-hidden')
-}else{
- subCategories.classList.add('categories-hidden')
+function categoriesWindowRemoveHandler() {
+  if (subCategories.classList.contains("categories-hidden")) {
+    subCategories.classList.remove("categories-hidden");
+  } else {
+    subCategories.classList.add("categories-hidden");
+  }
 }
 
-
-  
-  
- 
-}
-
-
-closeBtn.addEventListener('click',modalWindowClassRemoveHandler)
-selectLocation.addEventListener('click',modalWindowClassAddHandler)
-btnCategories.addEventListener('click',categoriesWindowRemoveHandler)
-
-
-
-
-
-
-
-
-
+closeBtn.addEventListener("click", modalWindowClassRemoveHandler);
+selectLocation.addEventListener("click", modalWindowClassAddHandler);
+btnCategories.addEventListener("click", categoriesWindowRemoveHandler);
