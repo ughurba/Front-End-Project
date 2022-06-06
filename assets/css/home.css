@@ -95,7 +95,7 @@
 }
 
 .header-top .container .nav-bar .nav-column-right .nav-right-text-content {
-  border-left: 1px solid black;
+  border-left: 1px solid #edeef5;
   padding: 0px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,7 +116,7 @@
 }
 
 .header-top .container .nav-bar .nav-column-right .nav-right-language-money {
-  border-left: 1px solid black;
+  border-left: 1px solid #edeef5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
