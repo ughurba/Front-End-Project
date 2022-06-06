@@ -23,28 +23,17 @@ new Swiper(".mySwiper",{
 
 
   new Swiper( '.swiper-container',{
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      dynamicBullets: true,
-    },
     centeredSlides:	true,
     
     loop: true,
    grabCursor:true,
-  //  slidesPerView: 1,
-  //   slidesPerGroup: 1,
     speed: 1000,
     navigation:{
       
         nextEl:'.swiper-button-next',
         prevEl:'.swiper-button-prev',
     },
-    
-
-    
   
-   
    })
 
 
