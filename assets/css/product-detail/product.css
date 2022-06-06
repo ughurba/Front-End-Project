@@ -890,4 +890,95 @@ body {
   font-size: 10px;
   color: #9b9bb4;
 }
+
+.main {
+  margin-top: 50px;
+}
+
+.main .main-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+}
+
+.main .main-flex .main-box-img .goods-box-img {
+  padding: 30px;
+}
+
+.main .main-flex .main-box-img .goods-box-img .goods-title {
+  padding-left: 10px;
+}
+
+.main .main-flex .main-box-img .goods-box-img .goods-title .star {
+  padding: 0px 13px;
+  border-left: 1px solid #e4e5ee;
+}
+
+.main .main-flex .main-box-img .goods-box-img .goods-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.9375rem;
+}
+
+.main .main-flex .main-box-img .goods-box-img .goods-title .brands-info {
+  padding: 0px 8px 0px 0px;
+}
+
+.main .main-flex .main-box-img .goods-box-img .goods-title .brands-info .brands {
+  margin-right: 4px;
+  border: none;
+  padding: 0;
+  font-size: .75rem;
+  font-weight: 400;
+  color: #9b9bb4;
+}
+
+.main .main-flex .main-box-img .goods-box-img .goods-title span {
+  margin: 0;
+  font-weight: 500;
+  color: #3e445a;
+  font-size: 11.2px;
+  padding: 0px 5px;
+}
+
+.main .main-flex .main-box-img .goods-box-img .price-goods-bottom-img {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 7px;
+  width: 50px;
+  height: 30px;
+  padding: 10px 10px;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 6px;
+  background-color: #2bbef9;
+  -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.main .main-flex .main-box-img .goods-box-img .recommended {
+  position: absolute;
+  top: 50px;
+  left: 7px;
+  border-radius: 3px;
+  background-color: #71778e;
+  padding: 4px 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.main .main-flex .main-box-img .fa-star {
+  font-size: 10px !important;
+}
 /*# sourceMappingURL=product.css.map */
