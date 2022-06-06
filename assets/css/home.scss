@@ -2162,7 +2162,6 @@
     }
   
   
- 
    
   
   
@@ -2242,13 +2241,86 @@
   
   
     
-    .bi {
+    
+    
+
+.footer{
+    background-color: #f7f8fd;
+    .footer-top {
+        padding-top: 2.1875rem;
+        padding-bottom: 2.1875rem;
+        .container {
+            .footer-top-flex {
+              .line{
+                  border-left: 2px solid #e4e5ee;
+              }
+               display: flex;
+               justify-content: space-evenly;
+               padding: 0px 20px;
+                h6{
+                    font-size: 14px;
+                   
+                    
+                &:nth-child(1){
+                    margin-left: 20px;
+                }  
+
+
+                
+                }
+                .fa-angular {
+                    margin-right: 10px;
+                }
+            }
+            .line-bottom {
+               margin-top: 50px;
+                border-top: 2px solid #e4e5ee;
+            }
+
+        }
     }
-    
-    
+  
+    .footer-center {
+        .container {
+            .footer-info {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 50px;
+                
+                ul{
+                    ul{
+                       
+                        span{
+                            display: inline-block;
+                            color: #202435;
+                            font-weight: 500;
+                            padding: 40px 0px 10px 0px ;
+                        }
+                        
+                        li{
+                            cursor: pointer;
+                            margin-top: 10px;
+                            list-style: none;
+                            color: #71778e;
+                            font-size: 14px;     
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+    }
 
 
 
+}
 
+   
+
+
+
+   
 
 
