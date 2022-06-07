@@ -1009,6 +1009,7 @@ margin-top: 50px;
        background: #fff;
         .main-box-img {
             .goods-box-img {
+           
                
                 padding: 30px;
                 padding-bottom: 0px;
@@ -1044,9 +1045,7 @@ margin-top: 50px;
                         font-size: 11.2px;
                         padding: 0px 5px;
                     }
-                    img{
-                       
-                    }
+                 
                 }
 
 
@@ -1066,20 +1065,16 @@ margin-top: 50px;
                 .slide-img {
                     border: 1px solid $border-color;
                     margin-left: 5px;
+                    cursor: pointer;
                 }
+                // .slide-img-border{
+                //     border: 1px solid black;
+                // }
             }
             .fa-star{
                 font-size: 10px !important;
             }
         }
-
-
-
-
-
-
-
-
 
         .main-goods-info {
         
@@ -1103,10 +1098,7 @@ margin-top: 50px;
                 @include organic();
                 
             }
-            span{
-                
-
-            }
+    
             p{
                 font-size: 14px;
                 font-weight: 400;
@@ -1216,6 +1208,7 @@ margin-top: 50px;
                 }
                 ul{    margin: 0;
                     padding: 0;
+                    padding-bottom: 17px;
                     list-style: none;
                         li{
                             position: relative;
@@ -1239,11 +1232,117 @@ margin-top: 50px;
 
 
 
+          .very-bottom-info{
+              p{
+                
+                  padding: 0;
+                  margin: 0;
+                  color: #9b9bb4;
+                  &:nth-child(1){
+                    border-top: 1px solid $border-color;
+                      padding-top: 30px;
+                  }
+                  span{
+                 
+                    font-weight: 500;
+                    color: #71778e;
+                    font-size: 13px;
+                    padding-left: 5px;
+                  }
+              }
+
+              .social{
+               padding: 30px 0px;
+               .fa-brands{
+                   &:hover{
+                       opacity: 0.9;
+                   }
+                   cursor: pointer;
+                display: inline-flex;
+                color: #fff;
+                align-items: center;
+              
+                justify-content: center;
+                font-size: .9375rem;
+                width: 2.125rem;
+                height: 2.125rem;
+                border-radius: 50%;
+                border: 1px solid
+               }
+         
           
+            .fa-facebook-f {
+                background-color: #233a95;
+                
+            }
+            .fa-twitter {
+                background-color: #1da1f2;
+            }
+            .fa-pinterest-p {
+                background-color: #e60023;
+            }
+            .fa-linkedin-in {
+                background-color: #0077b5;
+            }
+            .fa-reddit {
+                background-color:  #ff4500;
+            }
+            .fa-whatsapp {
+                background-color: #25d366;
+            }
+
+              }
+
+
+             
+          }
 
         }
 
 
+        .main-text-right {
+            margin-top: 90px;
+            .covid {
+                font-size: .75rem;
+                text-align: center;
+                width: 100%;
+                color: #be143c;;
+                background-color: #ffeef2;
+                border-radius: 4px;
+                padding: 10px 10px;
+                
+                margin-bottom: 0.75rem;
+                p{
+                    padding: 0;
+                    margin:0 ;
+                }
+            }
+            .main-text-right-info {
+                width: 300px;
+                    font-size: 16px;
+                    background: #f7f8fd;
+                ul{
+                    padding: 30px;
+                    
+                    li{
+                       display: flex;
+                       align-items: center;
+                        color: #202435;
+                        list-style: none;
+                        
+                           span{
+                            margin-left: 20px;
+                           }
+                        &:nth-child(2){
+                            margin-top: 30px;
+                        }
+                        &:nth-child(3){
+                            margin-top: 30px;
+                        }
+                    }
+                }
+            }
+        }
 
     }
 
