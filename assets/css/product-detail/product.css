@@ -1334,6 +1334,10 @@ body {
   margin-left: 25px;
 }
 
+.description .container .description-first .title h2:nth-child(1) {
+  color: black;
+}
+
 .description .container .description-first .title h2:first-child {
   margin: 0;
 }

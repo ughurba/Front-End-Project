@@ -32,8 +32,8 @@ function modalWindowClassAddHandler() {
 
 
 
-  //------------------------------////
-  // main-slide-img
+ 
+  //----------------------------- main-slide-img-------------------------//
 
 
   const mainImgs = document.querySelectorAll('.main-img')
@@ -45,7 +45,7 @@ function modalWindowClassAddHandler() {
   
         function showsHandler(){
 
-          
+
           const dataIdImg =  imgChild.getAttribute('data-id');
 
           slideImgs.forEach((item=>{
@@ -76,7 +76,7 @@ function modalWindowClassAddHandler() {
   })
 
 
-  // count-product -----------------------------//
+  //-------------------------------------- count-product -----------------------------//
 
 const minus = document.querySelector('.minus');
 const plus = document.querySelector('.plus');
@@ -104,3 +104,51 @@ function plusHandler(){
 
 minus.addEventListener('click',minusHandler)
 plus.addEventListener('click',plusHandler)
+
+
+
+
+
+//-------------------------------description----------------------------------//
+
+const descriptionBtns = document.querySelectorAll('.title-description')
+
+const descriptionsInfo = document.querySelectorAll('.descriptions')
+
+
+descriptionBtns.forEach(btn =>{
+
+
+function showInfo(){
+  const dataIdDescription = btn.getAttribute('data-id')
+
+
+  descriptionBtns.forEach(item=>{
+    item.style.color = '#c2c2d3'
+  })
+  btn.style.color='black'
+
+
+
+
+  descriptionsInfo.forEach(info=>{
+
+    const infoId = info.getAttribute('data-id')
+    if(infoId === dataIdDescription){
+
+      info.classList.remove('hidden')
+
+    }else if (infoId !== dataIdDescription){
+      info.classList.add('hidden')
+    }
+
+  })
+
+}
+
+
+
+  btn.addEventListener('click',showInfo);
+
+
+})

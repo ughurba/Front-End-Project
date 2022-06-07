@@ -1412,6 +1412,9 @@ body {
                 display: flex;
 
                 h2 {
+                    &:nth-child(1){
+                        color: black;
+                    }
                     cursor: pointer;
 
                     &:first-child {
