@@ -1473,15 +1473,42 @@ body {
   outline: none;
 }
 
+.description .container .reviews .reviews-bottom .add-review form .form-name label {
+  margin-bottom: 5px;
+}
+
 .description .container .reviews .reviews-bottom .add-review form .form-name input {
   height: 35px;
   width: 1088px;
   border: none;
   outline: none;
   background: #f3f4f7;
+  padding-left: 10px;
+}
+
+.description .container .reviews .reviews-bottom .add-review form .form-email label {
+  margin-bottom: 5px;
 }
 
 .description .container .reviews .reviews-bottom .add-review form .form-email input {
   height: 35px;
+  width: 1088px;
+  border: none;
+  outline: none;
+  background: #f3f4f7;
+  padding-left: 10px;
+}
+
+.description .container .reviews .reviews-bottom .add-review form .form-check-comment label {
+  font-size: 13.4px;
+}
+
+.description .container .reviews .reviews-bottom .add-review form .form-submit input {
+  color: #fff;
+  background: #233a95;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
 }
 /*# sourceMappingURL=product.css.map */

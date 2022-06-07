@@ -1606,32 +1606,49 @@ body {
                             outline: none;
                         }
                         .form-name {
-                            label{}
+                            label{
+                                margin-bottom: 5px;
+                            }
                             input{
                                 height: 35px;
                                 width: 1088px;
                                 border: none;
                                 outline: none;
                                 background: #f3f4f7;
+                                padding-left: 10px;
                             }
                         }
                         .form-email {
-                            label{}
+                            label{
+                                margin-bottom: 5px;
+                            }
                             input{
-                                height: 35px
+                                height: 35px;
+                                width: 1088px;
+                                border: none;
+                                outline: none;
+                                background: #f3f4f7;
+                                padding-left: 10px;
                             }
                         }
 
 
                         .form-check-comment {
-                            label{}
-                            input{
-
+                            label{
+                                font-size: 13.4px;
                             }
+                           
                         }
 
                         .form-submit {
-                            input{}
+                            input{
+                                color: #fff;
+                            background: #233a95;
+                            font-weight: 500;
+                                padding: 10px 20px;
+                                border-radius: 7px;
+                                border: none;
+                            }
                         }
 
                     }
