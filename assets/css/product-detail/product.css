@@ -998,6 +998,10 @@ body {
   cursor: pointer;
 }
 
+.main .main-flex .main-box-img .goods-imgs-slide .slide-img-border {
+  border: 1px solid black;
+}
+
 .main .main-flex .main-box-img .fa-star {
   font-size: 10px !important;
 }
@@ -1305,5 +1309,179 @@ body {
 
 .main .main-flex .main-text-right .main-text-right-info ul li:nth-child(3) {
   margin-top: 30px;
+}
+
+.description {
+  margin-top: 60px;
+}
+
+.description .container {
+  background: #fff;
+}
+
+.description .container .description-first .title {
+  border-bottom: 1px solid #e4e5ee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description .container .description-first .title h2 {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 20px 30px;
+  color: #c2c2d3;
+  margin-left: 25px;
+}
+
+.description .container .description-first .title h2:first-child {
+  margin: 0;
+}
+
+.description .container .description-first .paragraph p {
+  padding: 20px 30px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #202435;
+}
+
+.description .container .description-first .paragraph p:first-child {
+  padding-bottom: 0px;
+}
+
+.description .container .information {
+  padding: 20px 30px 4px 30px;
+}
+
+.description .container .information .table tbody tr th {
+  font-weight: 400;
+  text-align: left;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding: 8px;
+  border: 2px solid #e4e5ee;
+}
+
+.description .container .information .table tbody tr td {
+  padding: 8px;
+  border: 2px solid #e4e5ee;
+  text-align: left;
+}
+
+.description .container .reviews {
+  padding: 30px;
+}
+
+.description .container .reviews h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.description .container .reviews .reviews-bottom .img-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+.description .container .reviews .reviews-bottom .img-description .img-box img {
+  border-radius: 50%;
+}
+
+.description .container .reviews .reviews-bottom .img-description .description {
+  margin: 0;
+  margin-left: 15px;
+}
+
+.description .container .reviews .reviews-bottom .img-description .description .fa-star {
+  font-size: 10px;
+}
+
+.description .container .reviews .reviews-bottom .img-description .description .admin {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+
+.description .container .reviews .reviews-bottom .img-description .description .admin span {
+  color: #71778e;
+  font-size: 12px;
+}
+
+.description .container .reviews .reviews-bottom .img-description .description p {
+  color: #000000;
+  font-size: 13px;
+}
+
+.description .container .reviews .reviews-bottom .add-review h3 {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #333333;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.description .container .reviews .reviews-bottom .add-review p {
+  font-size: 14px;
+}
+
+.description .container .reviews .reviews-bottom .add-review .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.description .container .reviews .reviews-bottom .add-review .stars .star {
+  margin-top: 5px;
+  cursor: pointer;
+  margin-left: 14px;
+  padding-left: 10px;
+  border-left: 1px solid #e4e5ee;
+}
+
+.description .container .reviews .reviews-bottom .add-review .stars .star:first-child {
+  border: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.description .container .reviews .reviews-bottom .add-review .stars .star .fa-star {
+  color: #cac6c6;
+  font-size: 11px;
+}
+
+.description .container .reviews .reviews-bottom .add-review .stars .star:hover .fa-star {
+  color: yellow;
+}
+
+.description .container .reviews .reviews-bottom .add-review form p {
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
+.description .container .reviews .reviews-bottom .add-review form #comment {
+  height: 169px;
+  padding: 15px;
+  background: #f3f4f7;
+  width: 1088px;
+  border: none;
+  outline: none;
+}
+
+.description .container .reviews .reviews-bottom .add-review form .form-name input {
+  height: 35px;
+  width: 1088px;
+  border: none;
+  outline: none;
+  background: #f3f4f7;
+}
+
+.description .container .reviews .reviews-bottom .add-review form .form-email input {
+  height: 35px;
 }
 /*# sourceMappingURL=product.css.map */

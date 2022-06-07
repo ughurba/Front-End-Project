@@ -41,13 +41,19 @@ function modalWindowClassAddHandler() {
 
   slideImgs.forEach(imgChild =>{
 
-
-    
       imgChild.addEventListener('click', showsHandler);
   
-
         function showsHandler(){
+
+          
           const dataIdImg =  imgChild.getAttribute('data-id');
+
+          slideImgs.forEach((item=>{
+            item.parentElement.classList.remove('slide-img-border')
+          }))
+         
+
+          imgChild.parentElement.classList.add('slide-img-border')
       
           mainImgs.forEach(mainImg =>{
       
