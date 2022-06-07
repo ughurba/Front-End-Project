@@ -386,9 +386,9 @@
                </div>
 
                     <div style="position: relative;" class="img">
-                        <img style="display: block;" data-id="1" width="436px" src="./img/product/product-image-62.jpg">
-                        <img style="display: none;" data-id="2" width="436px" src="./img/product/product-image2-47.jpg">
-                        <img style="display: none;" data-id="3" width="436px" src="./img/product/product-image3-35.jpg">
+                        <img class="main-img"  data-id="1" width="436px" src="./img/product/product-image-62.jpg">
+                        <img class="main-img hidden"  data-id="2" width="436px" src="./img/product/product-image2-47.jpg">
+                        <img class="main-img hidden"  data-id="3" width="436px" src="./img/product/product-image3-35.jpg">
                         <span class="price-goods-bottom-img">23%</span>
                         <span class="recommended">RECOMMENDED</span>
                     </div>
@@ -398,16 +398,16 @@
 
 <div class="goods-imgs-slide">
 
-    <div class="slide-img">
-        <img width="59px" src="./img/product/product-image-62.jpg">
+    <div class="slide-img slide-img-border">
+        <img class="child-img " data-id="1" width="59px" src="./img/product/product-image-62.jpg">
        
     </div>
     <div class="slide-img">
-        <img  width="59px" src="./img/product/product-image2-47.jpg">
+        <img class="child-img" data-id="2"  width="59px" src="./img/product/product-image2-47.jpg">
        
     </div>
     <div class="slide-img">
-        <img  width="59px" src="./img/product/product-image3-35.jpg">
+        <img class="child-img" data-id="3"  width="59px" src="./img/product/product-image3-35.jpg">
        
     </div>
 
@@ -415,7 +415,6 @@
 
             
         </div>
-
         <div class="main-goods-info">
 <div class="price-organic">
             <div class="price">
@@ -476,17 +475,30 @@
 </div>
 <div class="main-text-right-info">
     <ul>
-        <li><i class="fa-solid fa-atom"></i>Free Shipping apply to all orders overs $100</li>
-        <li><i class="fa-solid fa-atom"></i>Guranteed 100% Organic from natural farmas</li>
-        <li><i class="fa-solid fa-atom"></i>1 Day Returns if you change your mind</li>
+        <li><i class="fa-solid fa-atom"></i><span>Free Shipping apply to all orders overs $100</span></li>
+        <li><i class="fa-solid fa-atom"></i><span>100% Organic from natural farmas</span> </li>
+        <li><i class="fa-solid fa-atom"></i><span>Day Returns if you change your mind</span> </li>
     </ul>
 </div>
 
 
 </div>
-
     </div>
 </main>
+
+<section class="description">
+    <div class="container">
+        <div class="title">
+            <h2>DESCRIPTION</h2>
+            <h2>ADDITIONAL INFORMATION</h2>
+            <h2>REVIEWS (1)</h2>
+        </div>
+        <p>Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin vitae magna in dui finibus malesuada et at nulla. Morbi elit ex, viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt. Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.</p>
+        <p>Morbi ut sapien vitae odio accumsan gravida. Morbi vitae erat auctor, eleifend nunc a, lobortis neque. Praesent aliquam dignissim viverra. Maecenas lacus odio, feugiat eu nunc sit amet, maximus sagittis dolor. Vivamus nisi sapien, elementum sit amet eros sit amet, ultricies cursus ipsum. Sed consequat luctus ligula. Curabitur laoreet rhoncus blandit. Aenean vel diam ut arcu pharetra dignissim ut sed leo. Vivamus faucibus, ipsum in vestibulum vulputate, lorem orci convallis quam, sit amet consequat nulla felis pharetra lacus. Duis semper erat mauris, sed egestas purus commodo vel.</p>
+    </div>
+
+
+</section>
 <script src="../assets/js/product-detail.js"></script>
 </body>
 </html>
