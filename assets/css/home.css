@@ -2427,7 +2427,6 @@ body {
 
 @keyframes button {
   from {
-    padding: 0px 28px;
     bottom: -20px;
   }
   to {
