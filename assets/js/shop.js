@@ -26,3 +26,8 @@ function categoriesWindowRemoveHandler() {
 closeBtn.addEventListener("click", modalWindowClassRemoveHandler);
 selectLocation.addEventListener("click", modalWindowClassAddHandler);
 btnCategories.addEventListener("click", categoriesWindowRemoveHandler);
+
+
+
+
+//------------------FILTER-----------------------

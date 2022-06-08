@@ -1,3 +1,10 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .aside {
   background-color: #233A95;
   padding: 7px 0px;
@@ -227,6 +234,7 @@
 .header-bottom {
   padding-top: 20px;
   position: relative;
+  padding-bottom: 40px;
 }
 
 .header-bottom .container .nav-bar-center {
@@ -854,5 +862,238 @@ body {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   z-index: 100;
+}
+
+.path {
+  padding-left: 110px;
+  border-top: 1px solid #e4e5ee;
+}
+
+.path span {
+  font-size: 11px;
+  color: #3e445a;
+  font-weight: 700;
+}
+
+.path .shop {
+  font-size: 10px;
+  color: #9b9bb4;
+  font-weight: 700;
+}
+
+.path .bi-chevron-right {
+  margin: 0px 5px;
+  font-weight: 900;
+  font-size: 8px;
+}
+
+.shop-menu {
+  padding-top: 40px;
+}
+
+.shop-menu .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shop-menu .flex .product-categories {
+  width: 270px;
+  margin-left: 50px;
+}
+
+.shop-menu .flex .product-categories h4 {
+  font-size: .9375rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  margin-bottom: 1.25rem;
+}
+
+.shop-menu .flex .product-categories ul {
+  padding: 0;
+}
+
+.shop-menu .flex .product-categories ul label {
+  margin: 0px;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.shop-menu .flex .product-categories ul input {
+  zoom: 1;
+  opacity: 0.7;
+}
+
+.shop-menu .flex .product-categories ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 0px;
+  list-style: none;
+}
+
+.shop-menu .flex .product-categories ul li span {
+  color: #71778e;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.shop-menu .flex .product-categories ul li .fa-plus {
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.shop-menu .flex .product-categories ul .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-menu .flex .product-categories ul .flex .check-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop-menu .flex .goods {
+  width: 100%;
+  padding-left: 50px;
+}
+
+.shop-menu .flex .goods .background {
+  background-image: url(/assets/img/shop/bacola-banner-18.jpg);
+  background-size: 100%;
+  height: 260px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop-menu .flex .goods .background .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.shop-menu .flex .goods .background .content h6 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: -.8px;
+  margin-bottom: 5px;
+}
+
+.shop-menu .flex .goods .background .content h2 span {
+  color: #00b853;
+  font-weight: 700;
+}
+
+.shop-menu .flex .goods .background .content .sub-content {
+  font-size: .75rem;
+  color: #9b9bb4;
+}
+
+.shop-menu .flex .goods .before-shop-loop {
+  background: #f7f8fd;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-menu .flex .goods .before-shop-loop .left-icon {
+  padding-left: 10px;
+}
+
+.shop-menu .flex .goods .before-shop-loop .left-icon .fa-bars {
+  color: #9b9bb4;
+  position: relative;
+  top: 2px;
+}
+
+.shop-menu .flex .goods .before-shop-loop .left-icon .bi {
+  cursor: pointer;
+  color: #9b9bb4;
+  margin-left: 15px;
+}
+
+.shop-menu .flex .goods .before-shop-loop .left-icon .bi-grid-3x3-gap-fill {
+  color: #000000;
+}
+
+.shop-menu .flex .goods .before-shop-loop .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.shop-menu .flex .goods .before-shop-loop .right .bi-chevron-down {
+  font-size: 9px;
+  position: relative;
+  bottom: 2px;
+}
+
+.shop-menu .flex .goods .before-shop-loop .right h4 {
+  padding-left: 0.375rem;
+  padding-right: 1.5625rem;
+  font-size: .8125rem;
+  color: #202435;
+  margin: 0;
+}
+
+.shop-menu .flex .goods .before-shop-loop .right .show {
+  border-left: 2px solid #e4e5ee;
+  padding-left: 30px;
+}
+
+.shop-menu .flex .goods .before-shop-loop .right .show .text {
+  color: #9b9bb4;
+  padding: 0px;
+}
+
+.shop-menu .flex .goods .before-shop-loop .right .show span {
+  font-size: 13px;
+  padding: 0px 0px 0px 4px;
+  color: #202435;
+  font-weight: 600;
 }
 /*# sourceMappingURL=shop.css.map */
