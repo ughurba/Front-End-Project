@@ -1060,7 +1060,9 @@ body {
             letter-spacing: 0;
             margin-bottom: 1.25rem;
         }
-        ul{
+        .parent-categories{
+            height: 360px;
+            overflow: auto;
             label{
                 margin: 0px;
                 margin-left: 13px;
@@ -1088,13 +1090,20 @@ body {
                     cursor: pointer;
                     font-size: 11px;
                 }
+                .calc{
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
             }
             .flex {
+                
                 display: flex;
                 align-items: flex-start;
                 flex-direction: column;
               
                 .check-flex {
+                  
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
@@ -1102,12 +1111,56 @@ body {
                     .input{
                     label{
                         margin-left: 9px;
+                        cursor: pointer;
                     }
-                    }
+                 }
                 }
+
+                .sub-menu{
+                    position: relative;
+                    margin-left: 28px;
+              
+                    
+                    ul{
+                        li{
+
+                        }
+                    }
+
+
+
+
+
+                }
+
+
+
             }
         }
         }
+ul{
+    padding: 0;
+}
+.check-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.flex-status{
+    display: flex;
+    flex-direction: column;
+    .status{
+        label{
+            margin-left: 9px;
+            cursor: pointer;
+        }
+    }
+}
+
+.hidden-categories{
+    display: none;
+}
 
         .goods {
             width: 100%;

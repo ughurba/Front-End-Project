@@ -910,22 +910,24 @@ body {
   margin-bottom: 1.25rem;
 }
 
-.shop-menu .flex .product-categories ul {
+.shop-menu .flex .product-categories .parent-categories {
+  height: 360px;
+  overflow: auto;
   padding: 0;
 }
 
-.shop-menu .flex .product-categories ul label {
+.shop-menu .flex .product-categories .parent-categories label {
   margin: 0px;
   margin-left: 13px;
   cursor: pointer;
 }
 
-.shop-menu .flex .product-categories ul input {
+.shop-menu .flex .product-categories .parent-categories input {
   zoom: 1;
   opacity: 0.7;
 }
 
-.shop-menu .flex .product-categories ul li {
+.shop-menu .flex .product-categories .parent-categories li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,18 +938,24 @@ body {
   list-style: none;
 }
 
-.shop-menu .flex .product-categories ul li span {
+.shop-menu .flex .product-categories .parent-categories li span {
   color: #71778e;
   font-size: 14px;
   font-weight: 400;
 }
 
-.shop-menu .flex .product-categories ul li .fa-plus {
+.shop-menu .flex .product-categories .parent-categories li .fa-plus {
   cursor: pointer;
   font-size: 11px;
 }
 
-.shop-menu .flex .product-categories ul .flex {
+.shop-menu .flex .product-categories .parent-categories li .calc {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.shop-menu .flex .product-categories .parent-categories .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -960,7 +968,7 @@ body {
           flex-direction: column;
 }
 
-.shop-menu .flex .product-categories ul .flex .check-flex {
+.shop-menu .flex .product-categories .parent-categories .flex .check-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,8 +981,50 @@ body {
   width: 100%;
 }
 
-.shop-menu .flex .product-categories ul .flex .check-flex .input label {
+.shop-menu .flex .product-categories .parent-categories .flex .check-flex .input label {
   margin-left: 9px;
+  cursor: pointer;
+}
+
+.shop-menu .flex .product-categories .parent-categories .flex .sub-menu {
+  position: relative;
+  margin-left: 28px;
+}
+
+.shop-menu .flex ul {
+  padding: 0;
+}
+
+.shop-menu .flex .check-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.shop-menu .flex .flex-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shop-menu .flex .flex-status .status label {
+  margin-left: 9px;
+  cursor: pointer;
+}
+
+.shop-menu .flex .hidden-categories {
+  display: none;
 }
 
 .shop-menu .flex .goods {
