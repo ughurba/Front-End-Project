@@ -1393,18 +1393,6 @@ body {
   font-weight: 500;
 }
 
-.goods-bottom .container .goods-bottom-boxs .organic {
-  position: absolute;
-  top: 55px;
-  left: 60px;
-  border-radius: 10px;
-  color: #038e42;
-  background: #e5f8ed;
-  padding: 4px 4px;
-  font-size: 10.4px;
-  font-weight: 700;
-}
-
 .goods-bottom .container .goods-bottom-boxs .goods-bottom-box-top {
   display: -webkit-box;
   display: -ms-flexbox;
