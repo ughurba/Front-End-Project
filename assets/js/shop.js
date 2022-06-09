@@ -81,3 +81,70 @@ const styleAndClasslist = (
     item.classList.remove(className);
   }
 };
+
+
+//goods number ////////////////////
+
+
+
+const goods = document.querySelectorAll('.goods-product')
+const numbers = document.querySelectorAll('.numbers')
+const leftArrow = document.querySelector('.bi-arrow-left')
+
+goods.forEach(product =>{
+
+ const productId =  product.getAttribute('data-id');
+ 
+
+ numbers.forEach(number =>{
+   const numberId = number.getAttribute('data-id')
+
+ 
+
+
+   function jumpByNumbers(){
+
+    numberId == 1 ?  leftArrow.style.display='none' : leftArrow.style.display='block'
+    
+ 
+
+    if(!product.classList.contains('hidden-goods')){
+      product.classList.add('hidden-goods')
+
+    }
+
+numbers.forEach(num=>{
+  if(num.classList.contains('number-background')){
+    num.classList.remove('number-background')
+  }
+})
+
+ 
+
+    if(productId == numberId){
+      product.classList.remove('hidden-goods')
+    }
+   
+   
+   
+
+    number.classList.add('number-background')
+
+
+  }
+
+  
+
+
+
+   number.addEventListener('click',jumpByNumbers);
+ })
+
+
+})
+
+
+//-------------------FILTER-------------------------------------//
+
+const filterInput = document.querySelector('.form-range')
+console.log(filterInput.value);
