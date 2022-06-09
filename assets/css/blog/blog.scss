@@ -262,7 +262,8 @@ $border-color: #e4e5ee;
 .header-bottom {
     padding-top: 20px;
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
 
     .container {
         .nav-bar-center {
