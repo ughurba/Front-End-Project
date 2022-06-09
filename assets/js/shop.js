@@ -149,5 +149,5 @@ numbers.forEach(num=>{
 
 //-------------------FILTER-------------------------------------//
 
-const filterInput = document.querySelector('.form-range')
-console.log(filterInput.value);
+// const filterInput = document.querySelector('.form-range')
+// console.log(filterInput.value);
