@@ -109,26 +109,29 @@ goods.forEach(product =>{
  
 
     if(!product.classList.contains('hidden-goods')){
-      product.classList.add('hidden-goods')
+     
+      styleAndClasslist(product,'hidden-goods','add');
 
     }
 
 numbers.forEach(num=>{
   if(num.classList.contains('number-background')){
-    num.classList.remove('number-background')
+   
+    styleAndClasslist(num,'number-background','remove');
   }
 })
 
  
 
     if(productId == numberId){
-      product.classList.remove('hidden-goods')
+    
+      styleAndClasslist(product,'hidden-goods','remove');
     }
    
    
    
-
-    number.classList.add('number-background')
+    styleAndClasslist(number,'number-background','add');
+   
 
 
   }
