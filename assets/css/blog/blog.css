@@ -863,4 +863,52 @@ body {
           backdrop-filter: blur(3px);
   z-index: 100;
 }
+
+.blog .container .left-blog .box {
+  padding: 40px;
+}
+
+.blog .container .left-blog .box img {
+  border-radius: 10px;
+}
+
+.blog .container .left-blog .box .info {
+  padding-top: 25px;
+  margin: 0px 0px 10px;
+}
+
+.blog .container .left-blog .box .info span {
+  color: #71778e;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.blog .container .left-blog .box .info span .bi {
+  color: #32BDF8;
+  padding: 0px 7px;
+}
+
+.blog .container .left-blog .box h3 {
+  font-size: 36px;
+  color: #202435;
+  width: 800px;
+  margin: 0px 0px 15px;
+}
+
+.blog .container .left-blog .box p {
+  font-size: 16px;
+  color: #202435;
+}
+
+.blog .container .left-blog .box .button {
+  margin: 30px 0px 0px;
+}
+
+.blog .container .left-blog .box .button a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 5px;
+  background-color: #233a95;
+}
 /*# sourceMappingURL=blog.css.map */
