@@ -31,3 +31,5 @@ btnCategories.addEventListener("click", categoriesWindowRemoveHandler);
 
 
 //----------------------BASKET----------------------//
+
+
