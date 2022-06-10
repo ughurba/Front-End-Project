@@ -124,19 +124,15 @@ goods.forEach((product) => {
 
 
 
-
-
-
-
-
-
 const btnAddtoCard = document.querySelectorAll(".button-goods");
-const totalBasket = document.querySelector('.price-basket');
+const totalBasket = document.querySelector('.price-count-basket');
 const countBasket = document.querySelector('.count-basket')
 
 
-
-
+if (localStorage.getItem("basket") !== null) {
+  sizeBasket();
+  totalGoods();
+}
 
 
 
@@ -148,7 +144,7 @@ function addingItemToCartHandler(ev) {
     localStorage.setItem("basket", JSON.stringify([]));
   }
 
- 
+
 
   let productId = this.parentElement.parentElement.getAttribute("data-id");
   let goodsList = JSON.parse(localStorage.getItem("basket"));
@@ -171,12 +167,13 @@ function addingItemToCartHandler(ev) {
     });
 
      localStorage.setItem("basket", JSON.stringify(goodsList));
-     sizeBasket()
+     sizeBasket();
+     totalGoods();
+
   }
 
 
 }
-
 
 
 
@@ -190,24 +187,32 @@ function renderBasketCount(productId) {
   if(existProduct !== undefined){
 
     existProduct.count++;
-   
      localStorage.setItem("basket", JSON.stringify(goodsList));
-    
+     totalGoods();
     return true;
+
   }
 
 
 }
 
-
-
-const  sizeBasket = () => {
+function sizeBasket() {
   let goodsList = JSON.parse(localStorage.getItem("basket"));
   countBasket.textContent = goodsList.length
 }
 
 
+function totalGoods(){
+  let sum = 0;
+  let goodsList = JSON.parse(localStorage.getItem("basket"));
+  goodsList.forEach(product =>{
+    
+    sum += product.price * product.count;
+  })
 
+  totalBasket.textContent ='$'+ sum
+  
+}
 
 
 
@@ -216,7 +221,7 @@ btnAddtoCard.forEach((btn) => {
   btn.addEventListener("click", addingItemToCartHandler);
 });
 
-sizeBasket();
+
 
 
 
