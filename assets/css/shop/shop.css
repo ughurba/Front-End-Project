@@ -1436,6 +1436,45 @@ body {
   font-weight: 500;
 }
 
+.shop-menu .flex .goods .goods-product .goods-box .button-flex .button-count {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  width: 200px;
+  height: 34px;
+  -webkit-transition: 2.2s;
+  transition: 2.2s;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-menu .flex .goods .goods-product .goods-box .button-flex .button-count .fa-minus {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #9b9bb4;
+  padding: 9px;
+}
+
+.shop-menu .flex .goods .goods-product .goods-box .button-flex .button-count a {
+  text-decoration: none;
+}
+
+.shop-menu .flex .goods .goods-product .goods-box .button-flex .button-count .fa-plus {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: yellow;
+  padding: 9px;
+}
+
 .shop-menu .flex .goods .goods-product .goods-box:hover .button-flex {
   opacity: 1;
   visibility: visible;

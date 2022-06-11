@@ -864,11 +864,21 @@ body {
   z-index: 100;
 }
 
-.container .table-basket {
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.flex .table-basket {
   margin-left: 50px;
 }
 
-.container .table-basket thead tr th {
+.flex .table-basket thead tr th {
   font-size: 14px;
   font-weight: 600;
   border-top: 0;
@@ -877,9 +887,127 @@ body {
   padding: 15px 30px;
 }
 
-.container .table-basket thead tr .product {
+.flex .table-basket thead tr .product {
   padding: 12px;
   width: 400px;
+}
+
+.flex .cart-collaterals {
+  border: 1px solid #e2e2ec;
+  color: #202435;
+  margin-left: 120px;
+  padding: 30px;
+  padding-bottom: 40px;
+}
+
+.flex .cart-collaterals h2 {
+  font-size: 16px;
+  margin: 0px 0px 8px;
+  padding: 0px 0px 15px;
+  border-bottom: 1px solid #e2e2ec;
+}
+
+.flex .cart-collaterals .subtotal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e2ec;
+}
+
+.flex .cart-collaterals .subtotal h4 {
+  font-size: 13px;
+  padding: 7px 8px 10px;
+  margin: 0;
+}
+
+.flex .cart-collaterals .subtotal .total {
+  font-size: 15px;
+}
+
+.flex .cart-collaterals .info-total .flex-total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e2e2ec;
+}
+
+.flex .cart-collaterals .info-total .flex-total h3 {
+  font-size: 14px;
+  padding: 8px 8px 8px 0px;
+}
+
+.flex .cart-collaterals .info-total .flex-total ul {
+  color: #202435;
+  font-size: 13px;
+}
+
+.flex .cart-collaterals .info-total .flex-total ul li {
+  list-style: none;
+  font-weight: 400;
+  padding-top: 10px;
+}
+
+.flex .cart-collaterals .info-total .flex-total ul li:last-child {
+  color: #2bbef9;
+  font-size: 13.2px;
+  margin: 10px 0px 10px;
+  cursor: pointer;
+}
+
+.flex .cart-collaterals .info-total .flex-total ul li input {
+  margin-left: 8.4px;
+}
+
+.flex .cart-collaterals .info-total .flex-total ul li span {
+  color: red;
+  margin-left: 4px;
+}
+
+.flex .cart-collaterals .sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #e2e2ec;
+}
+
+.flex .cart-collaterals .sum h4 {
+  font-size: 14px;
+  padding: 20px 8px 10px;
+}
+
+.flex .cart-collaterals .button {
+  margin-top: 40px;
+}
+
+.flex .cart-collaterals .button a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ed174a;
+  border-color: #ed174a;
+  border-radius: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 30px;
 }
 
 .cupon {

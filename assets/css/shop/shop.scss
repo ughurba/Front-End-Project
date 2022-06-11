@@ -1469,6 +1469,39 @@ body {
                                 font-weight: 500;
                             }
                         }
+
+
+                        .button-count {
+                            background-color: white;
+                            @include centerFlex();
+                            border-radius: 50px;
+                            width: 200px;
+                            height: 34px;
+                            transition: 2.2s;
+                            justify-content: space-between;
+                            .fa-minus {
+                                
+                                border-top-left-radius: 10px;
+                                border-bottom-left-radius: 10px;
+                                
+                                background: #9b9bb4;
+                                padding: 9px;
+                            }
+                            a{
+                            text-decoration: none;
+                            }
+                            .fa-plus {
+                              
+                                border-top-right-radius: 10px;
+                                border-bottom-right-radius: 10px;
+                                
+                                background: yellow;
+                                padding: 9px;
+                            }
+                        }
+                     
+                        
+                        
                     }
 
                 }
