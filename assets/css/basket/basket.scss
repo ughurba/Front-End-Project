@@ -933,6 +933,42 @@ body {
 }
 
 
+//-------table------//
+
+
+.container {
+    .table-basket {
+        margin-left: 50px;
+        thead{
+            tr{
+                th{
+                    font-size:14px;
+                    font-weight: 600;
+                    border-top: 0;
+                    border-bottom: 1px solid #e4e5ee;
+                    color:#71778e;
+                    padding: 15px 30px;
+                }
+                .product {
+                    padding: 12px;
+                    width: 400px;
+                   
+                    
+                }
+
+                .price {
+                }
+                .quantity {
+                }
+                .subtotal {
+                }
+            }
+        }
+      
+    }
+}
+
+
 
 
 

@@ -864,6 +864,24 @@ body {
   z-index: 100;
 }
 
+.container .table-basket {
+  margin-left: 50px;
+}
+
+.container .table-basket thead tr th {
+  font-size: 14px;
+  font-weight: 600;
+  border-top: 0;
+  border-bottom: 1px solid #e4e5ee;
+  color: #71778e;
+  padding: 15px 30px;
+}
+
+.container .table-basket thead tr .product {
+  padding: 12px;
+  width: 400px;
+}
+
 .cupon {
   margin-top: 7.1875rem;
 }
