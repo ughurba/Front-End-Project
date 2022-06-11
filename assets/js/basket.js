@@ -26,11 +26,22 @@ function createElement(){
      let tdSubTotal = document.createElement('td');
      let minus = document.createElement('i');
      let plus = document.createElement('i');
-
+     let closeBtn = document.createElement('i');
+            
      minus.classList.add('bi','bi-dash');
      plus.classList.add('fa-solid','fa-plus');
 
-   
+    
+    
+
+     closeBtn.style.position = 'absolute'
+     closeBtn.style.right = '0px'
+     closeBtn.style.top = '24px'
+     closeBtn.style.cursor = 'pointer'
+     closeBtn.setAttribute('data-id', `${element.id}`)
+     
+     closeBtn.classList.add('fa-solid','fa-xmark')
+
     styleCalc(minus);
     styleCalc(plus);
 
@@ -46,7 +57,7 @@ function createElement(){
     spanCount.insertAdjacentElement('afterbegin', minus)
       
     spanTotal.textContent ='$'+sum();
-
+        
     tdImg.append(img);
     tdTitle.append(p);
     tdPrice.append(spanPrice);
@@ -56,15 +67,41 @@ function createElement(){
     tdSubTotal.append(spanTotal)
     tdSubTotal.style.paddingLeft = '30px'
     tr.style.paddingTop = '150px' ;
-    tr.append(tdImg,tdTitle,tdPrice,tdQuantity,tdSubTotal)
+    tr.append(tdImg,tdTitle,tdPrice,tdQuantity,tdSubTotal,closeBtn)
     tr.style.borderBottom = '1px solid #dee2e6'
-    
+    tr.style.position = 'relative'
     tBody.append(tr)
 
-    minus.addEventListener('click',)
-
+        
+        
+        
+    closeBtn.addEventListener('click',removeElement)
+    minus.addEventListener('click',decreasingNumber)
     });
+    
 }
+
+
+function decreasingNumber(){
+    let num = 0;
+    num++
+
+
+}
+
+
+function removeElement() {
+
+    let idBtn = this.getAttribute('data-id')
+    let newArr = goodsList.filter(product => product.id !== idBtn)
+    
+    localStorage.setItem('basket', JSON.stringify(newArr))
+    goodsList =  JSON.parse(localStorage.getItem('basket'))
+    this.parentElement.remove()
+    
+
+}
+
 
 function sum(){
     let sum = 0;
