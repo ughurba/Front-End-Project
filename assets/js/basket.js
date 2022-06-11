@@ -47,22 +47,28 @@ function createElement(){
 
     plus.style.marginLeft ='10px'
     minus.style.marginRight ='10px'
-        
+    
+    
+    
+
+
+
     img.src = element.img;
     img.style.width='70px'
     p.textContent = element.title;
     spanPrice.textContent = element.price;   
     spanCount.textContent = element.count;
-    spanCount.insertAdjacentElement('beforeend', plus)
-    spanCount.insertAdjacentElement('afterbegin', minus)
-      
-    spanTotal.textContent ='$'+ sum(element.price,element.count);
-
+    spanCount.style.padding='5px'
+    tdQuantity.insertAdjacentElement('afterbegin', spanCount)
+    tdQuantity.insertAdjacentElement('beforeend', plus)
+    element.total = sum(element.price,element.count);
+    spanTotal.textContent ='$'+ element.total;
+        
     tdImg.append(img);
     tdTitle.append(p);
     tdPrice.append(spanPrice);
     tdPrice.style.paddingLeft = '30px'
-    tdQuantity.append(spanCount);
+    tdQuantity.insertAdjacentElement('afterbegin',minus);
     tdQuantity.style.paddingLeft='18px'
     tdSubTotal.append(spanTotal)
     tdSubTotal.style.paddingLeft = '30px'
@@ -72,25 +78,70 @@ function createElement(){
     tr.style.position = 'relative'
     tBody.append(tr)
 
-                                                   
-                                                              
+    minus.addEventListener('click',function(){
+            let num =0;
+            element.count--;
+            num = element.count
+
+            spanCount.textContent = num
+           
+
+            element.total = descendingTotal(element.price , element.total)
+            localStorage.setItem('basket', JSON.stringify(goodsList))
+            totalGoods();
+            spanTotal.textContent ='$' + element.total
+
           
-    closeBtn.addEventListener('click',removeElement)
-    minus.addEventListener('click',decreasingNumber)
+            
+            if(element.count === 0){
+              
+                removeElementInBasket(element.id)
+                this.parentElement.parentElement.remove();
+                location.reload();
+             }
+
+    });
+
+    
+    localStorage.setItem('basket', JSON.stringify(goodsList))
+        
+    plus.addEventListener('click',function(){
+        let num =0;
+            element.count++;
+            num = element.count
+
+            spanCount.textContent = num
+           
+
+            element.total = increasingNumber(element.price , element.total)
+            localStorage.setItem('basket', JSON.stringify(goodsList))
+            totalGoods();
+            spanTotal.textContent ='$' + element.total
+
+    }) 
+                                             
+          
+    closeBtn.addEventListener('click',removeElementHandler)
+ 
+
+
     });
     
 }
 
 
-function decreasingNumber(){
-    let num = 0;
-    num++
 
 
+function removeElementInBasket(id){
+
+    let newArr = goodsList.filter(product => product.id !== id)
+    
+    localStorage.setItem('basket', JSON.stringify(newArr))
+    goodsList =  JSON.parse(localStorage.getItem('basket'))
 }
 
 
-function removeElement() {
+function removeElementHandler() {
 
     let idBtn = this.getAttribute('data-id')
     let newArr = goodsList.filter(product => product.id !== idBtn)
@@ -98,19 +149,25 @@ function removeElement() {
     localStorage.setItem('basket', JSON.stringify(newArr))
     goodsList =  JSON.parse(localStorage.getItem('basket'))
     this.parentElement.remove()
-    
-
+    location.reload();
 }
+
 
 
 function sum(price,count){
     let result = 0;
-
-
        result += price * count
-    
      return result; 
 }
+
+const descendingTotal = (price,total) => total - price;
+    
+
+
+
+const increasingNumber = (price,total) => Number(total) + Number(price);
+
+
 
 function styleCalc(item){
     item.style.marginRight ='10px'
