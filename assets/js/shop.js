@@ -164,6 +164,7 @@ function addingItemToCartHandler(ev) {
         this.parentElement.parentElement.lastElementChild.previousElementSibling
           .lastElementChild.firstElementChild.textContent,
       count: 1,
+      total:0,
     });
 
      localStorage.setItem("basket", JSON.stringify(goodsList));
@@ -210,7 +211,7 @@ function totalGoods(){
     sum += product.price * product.count;
   })
 
-  totalBasket.textContent ='$'+ sum
+  totalBasket.textContent ='$'+ sum.toFixed(2)
   
 }
 

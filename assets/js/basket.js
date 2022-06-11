@@ -78,6 +78,8 @@ function createElement(){
     tr.style.position = 'relative'
     tBody.append(tr)
 
+    
+
     minus.addEventListener('click',function(){
             let num =0;
             element.count--;
@@ -85,14 +87,14 @@ function createElement(){
 
             spanCount.textContent = num
            
-
-            element.total = descendingTotal(element.price , element.total)
+          
+            element.total = descendingTotal(element.price , element.total).toFixed(2)
+            
             localStorage.setItem('basket', JSON.stringify(goodsList))
             totalGoods();
             spanTotal.textContent ='$' + element.total
 
-          
-            
+    
             if(element.count === 0){
               
                 removeElementInBasket(element.id)
@@ -102,23 +104,27 @@ function createElement(){
 
     });
 
-    
-    localStorage.setItem('basket', JSON.stringify(goodsList))
-        
+
+
     plus.addEventListener('click',function(){
         let num =0;
             element.count++;
             num = element.count
-
             spanCount.textContent = num
-           
-
-            element.total = increasingNumber(element.price , element.total)
+            element.total = increasingNumber(element.price , element.total).toFixed(2)
             localStorage.setItem('basket', JSON.stringify(goodsList))
             totalGoods();
             spanTotal.textContent ='$' + element.total
 
     }) 
+
+
+    
+    localStorage.setItem('basket', JSON.stringify(goodsList))
+     
+    
+
+   
                                              
           
     closeBtn.addEventListener('click',removeElementHandler)
