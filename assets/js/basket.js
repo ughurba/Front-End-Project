@@ -11,8 +11,8 @@ createElement();
 
 function createElement(){
     goodsList.forEach(element => {
-           
-    
+            
+       
      let tr = document.createElement('tr');
      let img = document.createElement('img');
      let p = document.createElement('p');
@@ -56,8 +56,8 @@ function createElement(){
     spanCount.insertAdjacentElement('beforeend', plus)
     spanCount.insertAdjacentElement('afterbegin', minus)
       
-    spanTotal.textContent ='$'+sum();
-        
+    spanTotal.textContent ='$'+ sum(element.price,element.count);
+
     tdImg.append(img);
     tdTitle.append(p);
     tdPrice.append(spanPrice);
@@ -72,9 +72,9 @@ function createElement(){
     tr.style.position = 'relative'
     tBody.append(tr)
 
-        
-        
-        
+                                                   
+                                                              
+          
     closeBtn.addEventListener('click',removeElement)
     minus.addEventListener('click',decreasingNumber)
     });
@@ -103,14 +103,13 @@ function removeElement() {
 }
 
 
-function sum(){
-    let sum = 0;
+function sum(price,count){
+    let result = 0;
 
-    goodsList.forEach(product =>{
-       sum += Number(product.price);
-      })
+
+       result += price * count
     
-     return sum; 
+     return result; 
 }
 
 function styleCalc(item){
