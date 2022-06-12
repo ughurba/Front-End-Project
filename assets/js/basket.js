@@ -2,7 +2,9 @@
 
 let goodsList = JSON.parse(localStorage.getItem("basket"));
 const tBody = document.querySelector(".tbody");
-
+const toShop = document.querySelector('.clean-basket')
+const table = document.querySelector('.table-basket')
+const rightCard = document.querySelector('.cart-collaterals')
 createElement();
 
 function createElement() {
@@ -27,7 +29,7 @@ function createElement() {
 
     closeBtn.style.position = "absolute";
     closeBtn.style.right = "0px";
-    closeBtn.style.top = "40px";
+    closeBtn.style.top = "24px";
     closeBtn.style.cursor = "pointer";
     closeBtn.setAttribute("data-id", `${element.id}`);
 
@@ -45,11 +47,12 @@ function createElement() {
     spanPrice.textContent = element.price;
     spanCount.textContent = element.count;
     spanCount.style.padding = "5px";
+    spanCount.classList.add('spanCount')
     tdQuantity.insertAdjacentElement("afterbegin", spanCount);
     tdQuantity.insertAdjacentElement("beforeend", plus);
     element.total = sum(element.price, element.count);
     spanTotal.textContent = "$" + element.total;
-    
+    spanTotal.classList.add('spanTotal')
     tdImg.append(img);
     tdTitle.append(p);
     tdPrice.append(spanPrice);
@@ -58,7 +61,6 @@ function createElement() {
     tdQuantity.style.paddingLeft = "18px";
     tdSubTotal.append(spanTotal);
     tdSubTotal.style.paddingLeft = "30px";
-    //tr.style.height = "100px";
     tr.append(tdImg, tdTitle, tdPrice, tdQuantity, tdSubTotal, closeBtn);
     tr.style.borderBottom = "1px solid #dee2e6";
     tr.style.position = "relative";
@@ -78,9 +80,12 @@ function createElement() {
 
       if (element.count === 0) {
         removeElementInBasket(element.id);
+        
         this.parentElement.parentElement.remove();
         location.reload();
       }
+      
+
     }
 
     function decrementPlus(){
@@ -105,12 +110,6 @@ function createElement() {
 }
 
 
-function removeElementInBasket(id) {
-  let filteredList = goodsList.filter((product) => product.id !== id);
-
-  localStorage.setItem("basket", JSON.stringify(filteredList));
-  goodsList = JSON.parse(localStorage.getItem("basket"));
-}
 
 function removeElementHandler() {
   let idBtn = this.getAttribute("data-id");
@@ -122,15 +121,12 @@ function removeElementHandler() {
   location.reload();
 }
 
-function sum(price, count) {
+ function sum(price, count) {
   let result = 0;
   result += price * count;
   return result;
 }
 
-const descendingTotal = (price, total) => total - price;
-
-const increasingNumber = (price, total) => Number(total) + Number(price);
 
 function styleCalc(item) {
   item.style.marginRight = "10px";
@@ -143,4 +139,16 @@ function styleCalc(item) {
   item.style.justifyContent = "center";
   item.style.borderRadius = "20px";
   item.style.fontSize = "13px";
+}
+returnToShop();
+
+function returnToShop(){
+ goodsList = JSON.parse(localStorage.getItem('basket')) 
+
+if(goodsList.length == 0){
+      toShop.style.display='flex'
+        table.style.display='none'
+        rightCard.style.display='none'
+}
+    
 }

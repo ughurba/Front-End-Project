@@ -122,11 +122,11 @@ goods.forEach((product) => {
 
 //-------------------basket-------------------------------------//
 
-
-
+const buttonCount = document.querySelectorAll('.button-count')
 const btnAddtoCard = document.querySelectorAll(".button-goods");
 const totalBasket = document.querySelector('.price-count-basket');
 const countBasket = document.querySelector('.count-basket')
+
 
 
 if (localStorage.getItem("basket") !== null) {
@@ -139,6 +139,11 @@ if (localStorage.getItem("basket") !== null) {
 
 function addingItemToCartHandler(ev) {
   ev.preventDefault();
+
+ 
+
+ 
+ 
 
   if (localStorage.getItem("basket") == null) {
     localStorage.setItem("basket", JSON.stringify([]));
@@ -167,12 +172,36 @@ function addingItemToCartHandler(ev) {
       total:0,
     });
 
+    goodsList.forEach(product =>{
+      this.nextElementSibling.firstElementChild.nextElementSibling.textContent = product.count
+    })
      localStorage.setItem("basket", JSON.stringify(goodsList));
      sizeBasket();
      totalGoods();
 
   }
 
+
+  
+
+
+  styleButtonCount('none','flex',this);
+
+
+}
+
+
+function styleButtonCount(propDisplayOne,propDisplayTwo,element){
+  
+  buttonCount.forEach(btnCount =>{
+    const btnCountId = btnCount.getAttribute('data-btn')
+    const btnAddId  = element.getAttribute('data-btn')
+    if(btnCountId == btnAddId){
+      element.style.display=propDisplayOne
+      btnCount.style.display=propDisplayTwo
+    }
+    
+  })
 
 }
 
@@ -226,9 +255,83 @@ btnAddtoCard.forEach((btn) => {
 
 
 
+// --------------------------------///
 
 
 
-// 6. removeFromBasket(id) - localestaregeden arrayi goturur parse eliyir, gelen id-ni silir. yeniden local stargeye qoyur (addin icinde islenen funksiyalar burda da isleyir)
 
-// 7. renderBasketGoods(goods from localStorage) - localstoragedeki arrayi goturur parse edir. ordaki id-lere uygun goods arrayinden mallari alir render edir
+const minusBtnCount = document.querySelectorAll('.btn-count-minus')
+const plusBtnCount = document.querySelectorAll('.btn-count-plus')
+
+if(minusBtnCount !== null || plusBtnCount !== null){
+
+  minusBtnCount.forEach(minusBtn=>{
+    minusBtn.addEventListener('click',decreaseCountHandler);
+  }) 
+  plusBtnCount.forEach(plusBtn =>{
+    plusBtn.addEventListener('click',increaseCountHandler);
+  })
+
+}
+
+
+
+function decreaseCountHandler(){
+  let goodsList = JSON.parse(localStorage.getItem('basket'))
+
+  goodsList.forEach(element=>{
+    
+    let num = 0;
+    element.count--;
+    num = element.count;
+    this.nextElementSibling.textContent = num;
+  
+   element.total = descendingTotal(element.price, element.total).toFixed(2);
+  
+    localStorage.setItem("basket", JSON.stringify(goodsList));
+    totalGoods();
+    
+    if (element.count === 0) {
+      styleButtonCount('flex','none',this.parentElement.previousElementSibling);
+      removeElementInBasket(element.id)
+      location.reload();
+    }
+  }) 
+
+
+}
+
+
+function increaseCountHandler(){
+  let goodsList = JSON.parse(localStorage.getItem('basket'))
+  goodsList.forEach(element=>{
+
+    let num = 0;
+  
+    element.count++;
+    num = element.count;
+    
+    this.previousElementSibling.textContent = num;
+    element.total = increasingNumber(element.price, element.total).toFixed(2);
+    localStorage.setItem("basket", JSON.stringify(goodsList));
+    totalGoods();
+  })
+ 
+
+}
+
+
+
+
+
+function removeElementInBasket(id) {
+  let goodsList = JSON.parse(localStorage.getItem('basket'))
+  let filteredList = goodsList.filter((product) => product.id !== id);
+
+  localStorage.setItem("basket", JSON.stringify(filteredList));
+  goodsList = JSON.parse(localStorage.getItem("basket"));
+}
+
+const descendingTotal = (price, total) => total - price;
+
+const increasingNumber = (price, total) => Number(total) + Number(price);

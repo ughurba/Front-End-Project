@@ -1472,6 +1472,7 @@ body {
 
 
                         .button-count {
+                            
                             background-color: white;
                             @include centerFlex();
                             border-radius: 50px;
@@ -1479,6 +1480,7 @@ body {
                             height: 34px;
                             transition: 2.2s;
                             justify-content: space-between;
+                            display: none;
                             .fa-minus {
                                 
                                 border-top-left-radius: 10px;
@@ -1550,6 +1552,7 @@ body {
             .hidden-goods{
                 display: none ;
             }
+         
 
 
 

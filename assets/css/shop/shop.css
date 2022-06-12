@@ -1455,6 +1455,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: none;
 }
 
 .shop-menu .flex .goods .goods-product .goods-box .button-flex .button-count .fa-minus {

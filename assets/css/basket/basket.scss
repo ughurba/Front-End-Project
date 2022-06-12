@@ -938,9 +938,9 @@ body {
 
 .flex {
      display: flex;
-     
-     justify-content: space-between;
-    margin-top: 40px;
+     align-items: flex-start;
+     justify-content: center;
+     margin-top: 40px;
 
     .table-basket {
         margin-left: 50px;
@@ -1070,6 +1070,23 @@ body {
     }
     
    
+    .clean-basket {
+        display: none;
+        flex-direction: column;
+       
+        .button-basket {
+            margin-top: 50px;
+            margin-left: 15px;
+            a{
+                border-radius: 10px;
+                text-decoration: none;
+                padding: 20px 35px;
+                background: #233a95;
+                font-weight: 500;
+                color: white;
+            }
+        }
+    }
    
     
   
