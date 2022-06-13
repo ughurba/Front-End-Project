@@ -28,10 +28,22 @@
   padding: 0px 6px;
 }
 
+@media screen and (max-width: 415px) {
+  .aside .container {
+    font-size: 11px;
+  }
+}
+
 .header-top {
   background-color: #fff;
   border-bottom: 1px solid #e3e4e6;
   color: #3e445a;
+}
+
+@media screen and (max-width: 415px) {
+  .header-top {
+    display: none;
+  }
 }
 
 .header-top .container .nav-bar {

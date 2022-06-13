@@ -122,41 +122,27 @@ goods.forEach((product) => {
 
 //-------------------basket-------------------------------------//
 
-const buttonCount = document.querySelectorAll('.button-count')
+const buttonCount = document.querySelectorAll(".button-count");
 const btnAddtoCard = document.querySelectorAll(".button-goods");
-const totalBasket = document.querySelector('.price-count-basket');
-const countBasket = document.querySelector('.count-basket')
-
-
+const totalBasket = document.querySelector(".price-count-basket");
+const countBasket = document.querySelector(".count-basket");
 
 if (localStorage.getItem("basket") !== null) {
   sizeBasket();
   totalGoods();
 }
 
-
-
-
 function addingItemToCartHandler(ev) {
   ev.preventDefault();
-
- 
-
- 
- 
 
   if (localStorage.getItem("basket") == null) {
     localStorage.setItem("basket", JSON.stringify([]));
   }
-
-
-
+  console.log(this.parentElement.parentElement);
   let productId = this.parentElement.parentElement.getAttribute("data-id");
   let goodsList = JSON.parse(localStorage.getItem("basket"));
 
- 
   if (!renderBasketCount(productId)) {
-
     goodsList.push({
       id: productId,
       img: this.parentElement.parentElement.firstElementChild.firstElementChild.nextElementSibling.nextElementSibling.getAttribute(
@@ -169,163 +155,128 @@ function addingItemToCartHandler(ev) {
         this.parentElement.parentElement.lastElementChild.previousElementSibling
           .lastElementChild.firstElementChild.textContent,
       count: 1,
-      total:0,
+      total: 0,
     });
 
-    goodsList.forEach(product =>{
-      this.nextElementSibling.firstElementChild.nextElementSibling.textContent = product.count
-    })
-     localStorage.setItem("basket", JSON.stringify(goodsList));
-     sizeBasket();
-     totalGoods();
-
+    goodsList.forEach((product) => {
+      this.nextElementSibling.firstElementChild.nextElementSibling.textContent =
+        product.count;
+    });
+    localStorage.setItem("basket", JSON.stringify(goodsList));
+    sizeBasket();
+    totalGoods();
   }
 
-
-  
-
-
-  styleButtonCount('none','flex',this);
-
-
+  styleButtonCount("none", "flex", this);
 }
 
-
-function styleButtonCount(propDisplayOne,propDisplayTwo,element){
-  
-  buttonCount.forEach(btnCount =>{
-    const btnCountId = btnCount.getAttribute('data-btn')
-    const btnAddId  = element.getAttribute('data-btn')
-    if(btnCountId == btnAddId){
-      element.style.display=propDisplayOne
-      btnCount.style.display=propDisplayTwo
+function styleButtonCount(propDisplayOne, propDisplayTwo, element) {
+  buttonCount.forEach((btnCount) => {
+    const btnCountId = btnCount.getAttribute("data-btn");
+    const btnAddId = element.getAttribute("data-btn");
+    if (btnCountId == btnAddId) {
+      element.style.display = propDisplayOne;
+      btnCount.style.display = propDisplayTwo;
     }
-    
-  })
-
+  });
 }
-
-
 
 function renderBasketCount(productId) {
-
   let goodsList = JSON.parse(localStorage.getItem("basket"));
 
   let existProduct = goodsList.find((p) => p.id == productId);
 
-  
-  if(existProduct !== undefined){
-
+  if (existProduct !== undefined) {
     existProduct.count++;
-     localStorage.setItem("basket", JSON.stringify(goodsList));
-     totalGoods();
+    localStorage.setItem("basket", JSON.stringify(goodsList));
+    totalGoods();
     return true;
-
   }
-
-
 }
 
 function sizeBasket() {
   let goodsList = JSON.parse(localStorage.getItem("basket"));
-  countBasket.textContent = goodsList.length
+  countBasket.textContent = goodsList.length;
 }
 
-
-function totalGoods(){
+function totalGoods() {
   let sum = 0;
   let goodsList = JSON.parse(localStorage.getItem("basket"));
-  goodsList.forEach(product =>{
-    
+  goodsList.forEach((product) => {
     sum += product.price * product.count;
-  })
+  });
 
-  totalBasket.textContent ='$'+ sum.toFixed(2)
-  
+  totalBasket.textContent = "$" + sum.toFixed(2);
 }
-
-
-
 
 btnAddtoCard.forEach((btn) => {
   btn.addEventListener("click", addingItemToCartHandler);
 });
 
-
-
-
-
 // --------------------------------///
 
+const minusBtnCount = document.querySelectorAll(".btn-count-minus");
+const plusBtnCount = document.querySelectorAll(".btn-count-plus");
 
-
-
-const minusBtnCount = document.querySelectorAll('.btn-count-minus')
-const plusBtnCount = document.querySelectorAll('.btn-count-plus')
-
-if(minusBtnCount !== null || plusBtnCount !== null){
-
-  minusBtnCount.forEach(minusBtn=>{
-    minusBtn.addEventListener('click',decreaseCountHandler);
-  }) 
-  plusBtnCount.forEach(plusBtn =>{
-    plusBtn.addEventListener('click',increaseCountHandler);
-  })
-
+if (minusBtnCount !== null || plusBtnCount !== null) {
+  minusBtnCount.forEach((minusBtn) => {
+    minusBtn.addEventListener("click", decreaseCountHandler);
+  });
+  plusBtnCount.forEach((plusBtn) => {
+    plusBtn.addEventListener("click", increaseCountHandler);
+  });
 }
 
+function decreaseCountHandler() {
+  let goodsList = JSON.parse(localStorage.getItem("basket"));
+  let parentId =
+    this.parentElement.parentElement.parentElement.getAttribute("data-id");
 
-
-function decreaseCountHandler(){
-  let goodsList = JSON.parse(localStorage.getItem('basket'))
-
-  goodsList.forEach(element=>{
-    
+  goodsList.forEach((element) => {
     let num = 0;
-    element.count--;
-    num = element.count;
-    this.nextElementSibling.textContent = num;
-  
-   element.total = descendingTotal(element.price, element.total).toFixed(2);
-  
-    localStorage.setItem("basket", JSON.stringify(goodsList));
-    totalGoods();
-    
-    if (element.count === 0) {
-      styleButtonCount('flex','none',this.parentElement.previousElementSibling);
-      removeElementInBasket(element.id)
-      location.reload();
+    if (element.id === parentId) {
+      element.count--;
+      num = element.count;
+      this.nextElementSibling.textContent = num;
+
+      element.total = descendingTotal(element.price, element.total).toFixed(2);
+
+      localStorage.setItem("basket", JSON.stringify(goodsList));
+      totalGoods();
+
+      if (element.count === 0) {
+        styleButtonCount(
+          "flex",
+          "none",
+          this.parentElement.previousElementSibling
+        );
+        removeElementInBasket(element.id);
+        location.reload();
+      }
     }
-  }) 
-
-
+  });
 }
 
-
-function increaseCountHandler(){
-  let goodsList = JSON.parse(localStorage.getItem('basket'))
-  goodsList.forEach(element=>{
-
+function increaseCountHandler() {
+  let goodsList = JSON.parse(localStorage.getItem("basket"));
+  let parentId =
+    this.parentElement.parentElement.parentElement.getAttribute("data-id");
+  goodsList.forEach((element) => {
     let num = 0;
-  
-    element.count++;
-    num = element.count;
-    
-    this.previousElementSibling.textContent = num;
-    element.total = increasingNumber(element.price, element.total).toFixed(2);
-    localStorage.setItem("basket", JSON.stringify(goodsList));
-    totalGoods();
-  })
- 
+    if (parentId == element.id) {
+      element.count++;
+      num = element.count;
 
+      this.previousElementSibling.textContent = num;
+      element.total = increasingNumber(element.price, element.total).toFixed(2);
+      localStorage.setItem("basket", JSON.stringify(goodsList));
+      totalGoods();
+    }
+  });
 }
-
-
-
-
 
 function removeElementInBasket(id) {
-  let goodsList = JSON.parse(localStorage.getItem('basket'))
+  let goodsList = JSON.parse(localStorage.getItem("basket"));
   let filteredList = goodsList.filter((product) => product.id !== id);
 
   localStorage.setItem("basket", JSON.stringify(filteredList));

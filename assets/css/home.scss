@@ -157,7 +157,20 @@
         .covid {
             padding: 0px 6px;
         }
+
+        @media screen and (max-width: 415px) {
+            &{
+                font-size: 11px;
+               
+                
+                
+            }
+            
+        }
+       
     }
+
+   
 }
 
 
@@ -168,7 +181,15 @@
     background-color: #fff;
     border-bottom: 1px solid #e3e4e6;
     color: #3e445a;
-
+    @media screen and (max-width: 415px) {
+        &{
+            display: none;
+           
+            
+            
+        }
+        
+    }
     .container {
 
         .nav-bar {
@@ -368,7 +389,15 @@
 .header-bottom {
     padding-top: 20px;
     position: relative;
-
+ 
+    // @media screen and (max-width: 415px) {
+    //     &{
+    //         display: none;
+        
+            
+    //     }
+        
+    // }
     .container {
         .nav-bar-center {
             margin-left: 30px;

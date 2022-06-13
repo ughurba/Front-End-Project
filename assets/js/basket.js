@@ -2,9 +2,9 @@
 
 let goodsList = JSON.parse(localStorage.getItem("basket"));
 const tBody = document.querySelector(".tbody");
-const toShop = document.querySelector('.clean-basket')
-const table = document.querySelector('.table-basket')
-const rightCard = document.querySelector('.cart-collaterals')
+const toShop = document.querySelector(".clean-basket");
+const table = document.querySelector(".table-basket");
+const rightCard = document.querySelector(".cart-collaterals");
 createElement();
 
 function createElement() {
@@ -47,12 +47,12 @@ function createElement() {
     spanPrice.textContent = element.price;
     spanCount.textContent = element.count;
     spanCount.style.padding = "5px";
-    spanCount.classList.add('spanCount')
+    spanCount.classList.add("spanCount");
     tdQuantity.insertAdjacentElement("afterbegin", spanCount);
     tdQuantity.insertAdjacentElement("beforeend", plus);
     element.total = sum(element.price, element.count);
     spanTotal.textContent = "$" + element.total;
-    spanTotal.classList.add('spanTotal')
+    spanTotal.classList.add("spanTotal");
     tdImg.append(img);
     tdTitle.append(p);
     tdPrice.append(spanPrice);
@@ -66,38 +66,60 @@ function createElement() {
     tr.style.position = "relative";
     tBody.append(tr);
 
-    function decrementMinus() {
-      let num = 0;
-      element.count--;
-      num = element.count;
-      spanCount.textContent = num;
-
-      element.total = descendingTotal(element.price, element.total).toFixed(2);
-
-      localStorage.setItem("basket", JSON.stringify(goodsList));
-      totalGoods();
-      spanTotal.textContent = "$" + element.total;
-
-      if (element.count === 0) {
-        removeElementInBasket(element.id);
-        
-        this.parentElement.parentElement.remove();
-        location.reload();
-      }
+    function decrementMinus() {  
+      let newGoodsList = JSON.parse(localStorage.getItem('basket'))
       
 
+      newGoodsList.forEach(item=>{
+
+        if(item.id == element.id){
+
+
+          item.count--;
+
+        spanCount.textContent = item.count;
+  
+        item.total = descendingTotal(item.price, item.total).toFixed(2);
+       
+        
+        localStorage.setItem("basket", JSON.stringify(newGoodsList));    
+  
+        totalGoods();
+        spanTotal.textContent = "$" + item.total;
+  
+        if (item.count === 0) {
+          removeElementInPageBasket(item.id);
+        
+          this.parentElement.parentElement.remove();
+          returnToShop();
+        }
+
+        }
+        
+      })
+  
     }
 
-    function decrementPlus(){
-      let num = 0;
-      element.count++;
-      num = element.count;
-      spanCount.textContent = num;
-      element.total = increasingNumber(element.price, element.total).toFixed(2);
-      localStorage.setItem("basket", JSON.stringify(goodsList));
+    function decrementPlus() {
+      let newGoodsList = JSON.parse(localStorage.getItem('basket'))
+
+      newGoodsList.forEach(item=>{
+        if(item.id === element.id){
+          
+      item.count++;
+   
+      spanCount.textContent = item.count;
+      item.total = increasingNumber(item.price, item.total).toFixed(2);
+      localStorage.setItem("basket", JSON.stringify(newGoodsList));
       totalGoods();
-      spanTotal.textContent = "$" + element.total;
+      spanTotal.textContent = "$" + item.total;
+        }
+      })
+
+
     }
+
+
 
     minus.addEventListener("click", decrementMinus);
 
@@ -111,6 +133,16 @@ function createElement() {
 
 
 
+function removeElementInPageBasket(id) {
+  let newList = JSON.parse(localStorage.getItem("basket"));
+  let filteredList = newList.filter((product) => product.id !== id);
+
+  localStorage.setItem("basket", JSON.stringify(filteredList));
+  goodsList = JSON.parse(localStorage.getItem("basket"));
+}
+
+
+
 function removeElementHandler() {
   let idBtn = this.getAttribute("data-id");
   let newArr = goodsList.filter((product) => product.id !== idBtn);
@@ -118,15 +150,16 @@ function removeElementHandler() {
   localStorage.setItem("basket", JSON.stringify(newArr));
   goodsList = JSON.parse(localStorage.getItem("basket"));
   this.parentElement.remove();
-  location.reload();
+  totalGoods();
+  returnToShop();
+ 
 }
 
- function sum(price, count) {
+function sum(price, count) {
   let result = 0;
   result += price * count;
   return result;
 }
-
 
 function styleCalc(item) {
   item.style.marginRight = "10px";
@@ -140,15 +173,15 @@ function styleCalc(item) {
   item.style.borderRadius = "20px";
   item.style.fontSize = "13px";
 }
+
 returnToShop();
 
-function returnToShop(){
- goodsList = JSON.parse(localStorage.getItem('basket')) 
+function returnToShop() {
+  goodsList = JSON.parse(localStorage.getItem("basket"));
 
-if(goodsList.length == 0){
-      toShop.style.display='flex'
-        table.style.display='none'
-        rightCard.style.display='none'
-}
-    
+  if (goodsList.length == 0) {
+    toShop.style.display = "flex";
+    table.style.display = "none";
+    rightCard.style.display = "none";
+  }
 }

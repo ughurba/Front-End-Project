@@ -1147,11 +1147,13 @@ body {
 
                 }
             }
-            .parent-categories::-webkit-scrollbar{
+
+            .parent-categories::-webkit-scrollbar {
                 width: 12px;
             }
-            .parent-categories::-webkit-scrollbar-track{
-                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+
+            .parent-categories::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
                 border-radius: 10px;
             }
 
@@ -1159,15 +1161,15 @@ body {
 
             .parent-categories::-webkit-scrollbar-thumb {
                 border-radius: 10px;
-                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
             }
 
 
 
 
 
-            
-            
+
+
         }
 
         ul {
@@ -1327,7 +1329,7 @@ body {
 
 
 
-           
+
 
             .goods-product {
                 display: grid;
@@ -1472,7 +1474,7 @@ body {
 
 
                         .button-count {
-                            
+
                             background-color: white;
                             @include centerFlex();
                             border-radius: 50px;
@@ -1481,29 +1483,32 @@ body {
                             transition: 2.2s;
                             justify-content: space-between;
                             display: none;
+
                             .fa-minus {
-                                
+
                                 border-top-left-radius: 10px;
                                 border-bottom-left-radius: 10px;
-                                
+
                                 background: #9b9bb4;
                                 padding: 9px;
                             }
-                            a{
-                            text-decoration: none;
+
+                            a {
+                                text-decoration: none;
                             }
+
                             .fa-plus {
-                              
+
                                 border-top-right-radius: 10px;
                                 border-bottom-right-radius: 10px;
-                                
+
                                 background: yellow;
                                 padding: 9px;
                             }
                         }
-                     
-                        
-                        
+
+
+
                     }
 
                 }
@@ -1549,47 +1554,50 @@ body {
 
             }
 
-            .hidden-goods{
-                display: none ;
+            .hidden-goods {
+                display: none;
             }
-         
 
 
 
-.number-next{
-    @include centerFlex();
-    margin-top: 65px;
-    .bi-arrow-left{
-        margin-right: 30px;
-        font-size: 17px;
-    }
-    .bi-arrow-right{
-        font-size: 17px;
-    }
-    span{
-        cursor: pointer;
-        font-size: 15px;
-        color: #202435;
-        font-weight: 500;
-        margin-right: 40px;
-    }
-   
-    .number-background{
-        color: #fff;
-        background-color: #2bbef9;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: .875rem;
-        font-weight: 600;
-        width: 2.25rem;
-        height: 2.25rem;
-        border-radius: 50%;
-        text-decoration: none;
 
-    }
-    
-}
+            .number-next {
+                @include centerFlex();
+                margin-top: 65px;
+
+                .bi-arrow-left {
+                    margin-right: 30px;
+                    font-size: 17px;
+                }
+
+                .bi-arrow-right {
+                    font-size: 17px;
+                }
+
+                span {
+                    cursor: pointer;
+                    font-size: 15px;
+                    color: #202435;
+                    font-weight: 500;
+                    margin-right: 40px;
+                }
+
+                .number-background {
+                    color: #fff;
+                    background-color: #2bbef9;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: .875rem;
+                    font-weight: 600;
+                    width: 2.25rem;
+                    height: 2.25rem;
+                    border-radius: 50%;
+                    text-decoration: none;
+
+                }
+
+            }
 
 
         }
